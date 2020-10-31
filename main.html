@@ -1,0 +1,90 @@
+
+
+<!--
+    폰트 강양조절 과감하게 해보자
+    색 반전도 해보자
+    배경 강하게 잡아주는것이 필요 (빛처리나 와이어 프레임 x)
+    블러처리 어설프다 차라리 오퍼시티 조절하자
+    인터랙션이 과할수있다. 디자인적으로 살짝 풀자 꿀렁 효과때문에 이미지가 안보일수있당
+-->
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJH Portfolio</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    
+    <header>
+        <a href="#" class="logo">
+            XY&Z
+        </a>
+        <nav class="nav">
+            <div class="nav_bar">
+                <span class="nav_bar_1"></span>
+                <span class="nav_bar_2"></span>
+                <span class="nav_bar_3"></span>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section>
+        <article class="greet">
+            <p>
+                안녕하세요! <br />
+                송재혁의 포트폴리오 웹사이트 입니다.
+            </p>
+
+            <div class="scrollArea">
+                <span class="scrollDot"></span>
+                <p class="scrollTxt">PORTFOLIO</p>
+            </div>
+            <div id="bg_3D"></div>
+        </article>
+
+        <article class="interstellar work">
+            <a href="#">
+                INTERSTELLAR<br />
+                <span>WEB DESIGN</span>
+            </a>
+            <div id="inter_3D"></div>
+        </article>
+        
+        
+        <article class="subway work">
+            <a href="#">
+                Subway<br />
+                <span>MIRROR DISPLAY</span>
+            </a>
+            <div id="subway_3D"></div>
+        </article>
+
+
+        <article class="dream work">
+            <a href="#">
+                DREAM<br />
+                <span>GAME</span>
+            </a>
+            <div id="dream_3D"></div>
+        </article>
+
+    </section>
+
+    
+
+    <script src="./vendor/three.min.js"></script>
+    <script src="./vendor/OrbitControls.js"></script>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>

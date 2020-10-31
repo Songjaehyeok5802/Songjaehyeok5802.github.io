@@ -1,0 +1,56 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
+
+*{font-family:'Noto Sans KR' , serif; overflow-x: hidden;} 
+header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
+header > a.logo{ font-size: 30px; margin-left: 80px; display: inline-block; color: #000 ; text-decoration: none; overflow: hidden; vertical-align: top;}
+header > nav.nav{float: right; margin-right: 100px;}
+header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden;}
+header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: black; display:block; transition: 500ms;}
+header > nav.nav > div.nav_bar > span.nav_bar_1{}
+header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
+header > nav.nav > div.nav_bar > span.nav_bar_3{width: 50%; float: right;}
+
+/* article.greet{height: 1080px;} */
+article.greet > p{
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; 
+    line-height: 60px; font-weight: 400; color: #fff; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
+    animation: startGreet 2s forwards linear; font-family: 'Nanum Myeongjo';
+}
+@keyframes startGreet{
+    0%{opacity: 0; margin-top: 10px;}
+    100%{opacity: 1; margin-top: 0px;}
+}
+
+
+
+article.greet > div.scrollArea{position: absolute; left: 50%; transform: translateX(-50%);bottom: 20px; width: 100px; height: 100px;}
+article.greet > div > span.scrollDot{
+    display: block; position: absolute; width: 10px; height: 10px; background-color: #5e5e5e; left: 50%; transform: translateX(-50%);
+    border-radius: 50%; animation: scrollAni 1.5s ease-in-out infinite;
+}
+article.greet > div > p.scrollTxt{
+    position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%;
+}
+article.greet > div#bg_3D{position: fixed; z-index: -1;}
+
+@keyframes scrollAni{
+    0%{bottom: 100px; opacity: 0;width: 5px; height: 5px;}
+    100%{bottom: 50px; opacity: 1;width: 10px; height: 10px;}
+}
+
+article.work{position: relative;}
+article.work > a{
+    font-size: 70px; font-weight: 700; position: absolute; top: 70%; text-decoration: none; color: black; font-family: "Nanum Myeongjo"; 
+    text-transform: capitalize; line-height: 75px;
+}
+article.work > a > span{font-size: 20px; font-weight: 400; font-family:"Noto Sans KR"; text-transform: none; line-height: 20px;}
+
+article.interstellar{}
+article.interstellar > a{ left: 10%;}
+
+article.subway{}
+article.subway > a{ right: 10%; text-align: right;}
+
+article.dream{}
+article.dream > a{ left: 10%;}

@@ -1,0 +1,50 @@
+
+
+*{font-family:'Noto Sans KR' , serif;} 
+
+body{overflow: hidden;}
+
+header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
+header > a.logo{ font-size: 30px; margin-left: 80px; display: inline-block; color: #000 ; text-decoration: none;}
+header > nav.nav{float: right; margin-right: 100px;}
+header > nav.nav > div.nav_bar{width: 40px; height: 50px;}
+header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: black; display:block;}
+header > nav.nav > div.nav_bar > span.nav_bar_1{}
+header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
+header > nav.nav > div.nav_bar > span.nav_bar_3{width: 50%; float: right;}
+
+section > div#bg_3D{filter: blur(2px); position: absolute;}
+
+article{transition: 800ms;}
+article > div.imgWrap{width: 425px; top: 50%; transform: translateY(-50%); left: 20%; position: fixed;}
+/* article > div.imgWrap > img{height: 450px; width: 450px;} */
+article > div.imgWrap > div{width: 425px; height: 425px;}
+article > div.imgWrap > p{text-align: center; margin-top: 20px;}
+article > div.imgWrap > a{
+    width: 35px; height: 35px; display: block; margin: 20px auto 0; border: 1px dotted #000; border-radius: 50%;
+    animation: turnIconOut 7s infinite linear;
+}
+article > div.imgWrap > a::after{
+    content: ""; position: absolute; width: 15px; height: 15px; border: 1px dotted #000; border-radius: 50%;margin: 10px;
+    animation: turnIconIn 4s infinite linear;
+}
+@keyframes turnIconOut{
+    0%{}
+    100%{transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);}
+}
+@keyframes turnIconIn{
+    0%{transform: rotateY(-360deg) rotateX(-360deg) rotateZ(-360deg);}
+    100%{}
+}
+
+article > div.txtWrap{width: 600px;position: absolute; right: 15%; top: 20%; pointer-events: none;}
+article > div.txtWrap > p.title{
+    font-weight: 900; font-size: 70px; margin-bottom: 25px; padding-bottom: 10px;
+}
+article > div.txtWrap > span{display: block; height: 1px; width: 550px; border-bottom: 1px solid rgba(58, 58, 58, 0.301); margin-bottom: 50px;}
+article > div.txtWrap > p.mainTxt{font-weight: 100; font-size: 21px; line-height: 35px;;}
+article > div.txtWrap > p.mainTxt > span{font-weight: 400;}
+
+
+article.visual{position: fixed;}
+article.visual > div#img3D{transition: 800ms; opacity: 1; position: absolute; z-index: -1;}
