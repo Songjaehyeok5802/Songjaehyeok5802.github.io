@@ -232,7 +232,7 @@ function scrollOpacity(){
       if (currentScroll < checkpoint) {
         bg.style.opacity = 1.3 - currentScroll / checkpoint;
       } else {
-        bg.style.opacity = 0.3;
+        bg.style.opacity = 0.1;
       }
     });
 }
@@ -272,9 +272,11 @@ function navigation(){
 function Init(){
     // Three Js
     bg_3D();
-    inter_3D();
-    subway_3D();
-    dream_3D();
+    // inter_3D();
+    // subway_3D();
+    // dream_3D();
+    // threejs
+
 
     // Vanila Js
     scrollOpacity();
