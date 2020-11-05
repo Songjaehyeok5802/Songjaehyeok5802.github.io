@@ -32,7 +32,10 @@ section > article > div > div > ul > li > span{font-weight: 600; font-family: "C
 section > article > div > div > ul > li:first-child{float: left;}
 section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
-section > article > div > img.subImg{width: 1400px;}
+section > article > div > div.about{text-align: left;}
+section > article > div > div.about > img.aboutImg{width: 700px;}
+section > article > div > div.story{text-align: right; margin-top: 50px;}
+section > article > div > div.story > img.storyImg{width: 700px;}
 
 footer{margin: 300px 0 350px; text-align: center;}
 footer > a{color: #000; text-decoration: none; font-size: 200px; font-weight: 100;}
