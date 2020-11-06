@@ -49,10 +49,10 @@ article.work > div{
     position: relative; margin: 0 auto; width: 1400px; height: 550px; top: 20%; display: flex; justify-content: space-between;}
 article.work > div > div.title{position: absolute; bottom: 0;}
 article.work > div > div.title > a{
-    font-size: 50px; font-weight: 700; text-decoration: none; color: black; font-family: "Cormorant Garamond"; display: block;
+    font-size: 70px; font-weight: 700; text-decoration: none; color: black; font-family: "Cormorant Garamond"; display: block;
     margin-bottom: 15px;
 }
-article.work > div > div.title > span{font-size: 20px; font-weight: 400; font-family:'Noto Sans KR'; text-transform: none; display: block;}
+article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-family:'Noto Sans KR'; text-transform: none; display: block;}
 article > div > img{width: 1000px; position: absolute; right: 0;}
 
 /* article */

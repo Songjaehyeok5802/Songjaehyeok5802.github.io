@@ -77,7 +77,7 @@ function bg_3D() {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
     document.getElementById("bg_3D").appendChild(renderer.domElement);
-    // control = new THREE.OrbitControls(camera, renderer.domElement);
+    control = new THREE.OrbitControls(camera, renderer.domElement);
 
     //SIZE ---------
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -108,7 +108,7 @@ function bg_3D() {
     SpotlightRight.position.set(0, 0, -3);
     SpotlightUp.position.set(0, 4, 0);
 
-    var geo = new THREE.SphereGeometry( 1.5, 20, 20);
+    var geo = new THREE.SphereGeometry( 1.5, 40, 40);
     const mat = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
     const box = new THREE.Mesh(geo, mat);
     box.position.set(0, 0, 0);
@@ -120,13 +120,13 @@ function bg_3D() {
         requestAnimationFrame(renderScene);
 
         if(camera.position.x > 0){
-            camera.position.x -=0.03;
+            camera.position.x -=0.01;
         }
         if(camera.position.y < 0.5){
-            camera.position.y +=0.03;
+            camera.position.y +=0.01;
         }
         if(camera.position.z < 3){
-            camera.position.z +=0.03;
+            camera.position.z +=0.01;
         }
         camera.lookAt(0, 0, 0);
 
