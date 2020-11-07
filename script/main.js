@@ -63,7 +63,6 @@ function bg_3D() {
 
     let count = 0;
     window.addEventListener("click", ()=>{
-        console.log("click");
         if(count == 0){
             scene.remove(colorMesh);
             scene.add(interMesh);
@@ -158,6 +157,23 @@ function navigation(){
 
 }
 
+function contactBtn(){
+    const a_Contact = $("li.contact"),
+          contactEls = $("div.contact_popup"),
+          closeBtn = $("div.closeContact");
+
+    a_Contact.click(
+        ()=>{
+            contactEls.css({"opacity" : 1, "pointer-events": "all"})
+        }
+    )
+    closeBtn.click(
+        ()=>{
+            contactEls.css({"opacity" : 0, "pointer-events": "none"})
+        }
+    )
+}
+
 function Init(){
     // Three Js
     bg_3D();
@@ -166,6 +182,7 @@ function Init(){
     // Vanila Js
     scrollOpacity();
     navigation();
+    contactBtn();
     const greet = document.querySelector(".greet");
     greet.style.height=window.innerHeight + "px";
 }

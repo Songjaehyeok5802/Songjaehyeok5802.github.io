@@ -8,22 +8,6 @@ new hoverEffect({
     displacementImage:"./img/profile_Img/effect.png"
 });
 
-// const img = document.querySelector("#changeImg");
-// const introduce = document.querySelector(".introduce");
-// const imgVisual = document.querySelector("#img3D");
-// let isBg = true;
-
-
-// const trans3D = document.querySelector("a.icon");
-// trans3D.addEventListener("click", ()=>{
-//     console.log(123);
-//     introduce.style.opacity = "0";
-//     introduce.style.display = "none";
-//     imgVisual.style.opacity = "1";
-//     img3D();
-//     bg_3D();
-// });
-
 function img3D() {
     var scene = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
@@ -72,12 +56,14 @@ function img3D() {
 
 
 // 배경 3D
+
+
 function bg_3D() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
     document.getElementById("bg_3D").appendChild(renderer.domElement);
-    control = new THREE.OrbitControls(camera, renderer.domElement);
+    // control = new THREE.OrbitControls(camera, renderer.domElement);
 
     //SIZE ---------
     renderer.setSize(window.innerWidth, window.innerHeight);
