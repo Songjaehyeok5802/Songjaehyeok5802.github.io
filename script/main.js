@@ -23,36 +23,79 @@ function bg_3D() {
     camera.lookAt(scene.position);  
 
     //LIGHT-------------
-    const SpotlightDown = new THREE.PointLight( 0xffffff, 1.5); 
+    const SpotlightDown = new THREE.PointLight( 0xffffff, 1); 
     const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 3); 
     const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 3); 
-    const SpotlightUp = new THREE.PointLight( 0xffffff, 1.4);  
-    // scene.add( SpotlightDown );
-    // scene.add( SpotlightLeft );
-    // scene.add( SpotlightRight );
+    const SpotlightUp = new THREE.PointLight( 0xffffff, 1);  
+    const SpotlightFront = new THREE.PointLight( 0xffffff, 1.2);  
+    scene.add( SpotlightDown );
+    scene.add( SpotlightLeft );
+    scene.add( SpotlightRight );
     scene.add( SpotlightUp );
+    // scene.add( SpotlightFront );
     SpotlightDown.position.set(0, -4, 0);
     SpotlightLeft.position.set(0, 0, 3);
     SpotlightRight.position.set(0, 0, -3);
-    // SpotlightUp.position.set(0, 4, 0);
-    SpotlightUp.position.set(10, 0, 0);
+    SpotlightUp.position.set(0, 4, 0);
+    SpotlightFront.position.set(10, 0, 0);
 
-    // const geo = new THREE.IcosahedronGeometry(1, 3);
-    const geo = new THREE.SphereGeometry( 1.5, 20, 20);
-    // const texture = new THREE.TextureLoader().load( '../img/project/interstellar/2D/Main.png' );
-    const texture = new THREE.TextureLoader().load( '../img/project/dream/Main.png' );
-    // const texture = new THREE.TextureLoader().load( '../img/project/subway/subway_1.png' );
-    const mat = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: texture});
-    const box = new THREE.Mesh(geo, mat);
-    box.position.set(0, 0, 0);
-    scene.add(box);
 
+    const geoSphere = new THREE.SphereGeometry( 1.5, 30, 30);
+    const matColor = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
+    const colorMesh = new THREE.Mesh(geoSphere, matColor);
+    colorMesh.position.set(0, 0, 0);
+    scene.add(colorMesh);
+
+    const textureInter = new THREE.TextureLoader().load( '../img/project/interstellar/2D/Main.png' );
+    const matInter = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureInter});
+    const interMesh = new THREE.Mesh(geoSphere, matInter);
+    interMesh.position.set(0, 0, 0);
+
+    const textureDream = new THREE.TextureLoader().load( '../img/project/dream/Main.png' );
+    const matDream = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureDream});
+    const dreamMesh = new THREE.Mesh(geoSphere, matDream);
+    dreamMesh.position.set(0, 0, 0);
+
+    const textureSubway = new THREE.TextureLoader().load( '../img/project/subway/subway_1.png' );
+    const matSubway = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureSubway});
+    const subwayMesh = new THREE.Mesh(geoSphere, matSubway);
+    subwayMesh.position.set(0, 0, 0);
+
+    let count = 0;
+    window.addEventListener("click", ()=>{
+        console.log("click");
+        if(count == 0){
+            scene.remove(colorMesh);
+            scene.add(interMesh);
+            scene.add( SpotlightFront );
+            count++;
+        }else if(count == 1){
+            scene.remove(interMesh);
+            scene.add(dreamMesh);
+            count++;
+        }else if(count == 2){
+            scene.remove(dreamMesh);
+            scene.add(subwayMesh);
+            count ++;
+        }else if(count == 3){
+            scene.remove(subwayMesh);
+            scene.add(colorMesh);
+            scene.remove( SpotlightFront );
+            count = 0;
+        }
+    })
 
     //RENDER-------------------------------------------------------------------------------
     const renderScene = new function renderScene() {
         requestAnimationFrame(renderScene);
 
-        box.rotation.y += 0.002;
+        
+        colorMesh.rotation.y += 0.0035;
+        interMesh.rotation.y += 0.0035;
+        dreamMesh.rotation.y += 0.0035;
+        subwayMesh.rotation.y += 0.0035;
+
+
 
         renderer.render(scene,camera);
     }   
@@ -78,19 +121,22 @@ function navigation(){
     const navBar = $("div.nav_bar"),
           bar_1 = $("span.nav_bar_1"),
           bar_2 = $("span.nav_bar_2"),
-          bar_3 = $("span.nav_bar_3");
+          bar_3 = $("span.nav_bar_3"),
+          menu = $("div.menu");
     let   click = false;
 
     navBar.click(() => {
         if(!click){
-            bar_2.css("opacity", 0),
-            bar_1.css({'transform':'rotate('+ 45 +'deg) translate(10px, 10px)' }),
-            bar_3.css({'transform':'rotate('+ -45 +'deg) translate(9px, -7px) '}),
+            bar_2.css("opacity", 0);
+            bar_1.css({'transform':'rotate('+ 45 +'deg) translate(10px, 10px)' });
+            bar_3.css({'transform':'rotate('+ -45 +'deg) translate(9px, -7px) '});
+            menu.addClass("active");
             click = true;
         }else{
             bar_2.css("opacity", 1),
-            bar_1.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px)' }),
-            bar_3.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px) '}),
+            bar_1.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px)' });
+            bar_3.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px) '});
+            menu.removeClass("active");
             click = false;
         }
     });
