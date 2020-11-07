@@ -11,3 +11,7 @@ window.addEventListener("scroll", () => {
   document.querySelector(".title").style.opacity = opacityG;
 });
 
+$(window).scroll(()=>{
+  let scrollVal = $(document).scrollTop();
+  console.log(scrollVal);
+})

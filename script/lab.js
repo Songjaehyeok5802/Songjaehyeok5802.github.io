@@ -24,8 +24,8 @@ function bg_3D() {
 
     //LIGHT-------------
     const SpotlightDown = new THREE.PointLight( 0xffffff, 1); 
-    const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 3); 
-    const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 3); 
+    const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 1); 
+    const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 1); 
     const SpotlightUp = new THREE.PointLight( 0xffffff, 1);  
     const SpotlightFront = new THREE.PointLight( 0xffffff, 1.2);  
     scene.add( SpotlightDown );
@@ -43,46 +43,20 @@ function bg_3D() {
     const geoSphere = new THREE.SphereGeometry( 1.5, 30, 30);
     const matColor = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
     const colorMesh = new THREE.Mesh(geoSphere, matColor);
+    const colorMesh2 = new THREE.Mesh(geoSphere, matColor);
+    const colorMesh3 = new THREE.Mesh(geoSphere, matColor);
+    const colorMesh4 = new THREE.Mesh(geoSphere, matColor);
+    const colorMesh5 = new THREE.Mesh(geoSphere, matColor);
     colorMesh.position.set(0, 0, 0);
+    colorMesh2.position.set(3, 0, 0);
+    colorMesh3.position.set(-3, 0, 0);
+    colorMesh4.position.set(6, 0, 0);
+    colorMesh5.position.set(-6, 0, 0);
     scene.add(colorMesh);
-
-    const textureInter = new THREE.TextureLoader().load( '../img/project/interstellar/2D/Main.png' );
-    const matInter = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureInter});
-    const interMesh = new THREE.Mesh(geoSphere, matInter);
-    interMesh.position.set(0, 0, 0);
-
-    const textureDream = new THREE.TextureLoader().load( '../img/project/dream/Main.png' );
-    const matDream = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureDream});
-    const dreamMesh = new THREE.Mesh(geoSphere, matDream);
-    dreamMesh.position.set(0, 0, 0);
-
-    const textureSubway = new THREE.TextureLoader().load( '../img/project/subway/subway_1.png' );
-    const matSubway = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureSubway});
-    const subwayMesh = new THREE.Mesh(geoSphere, matSubway);
-    subwayMesh.position.set(0, 0, 0);
-
-    let count = 0;
-    window.addEventListener("click", ()=>{
-        if(count == 0){
-            scene.remove(colorMesh);
-            scene.add(interMesh);
-            scene.add( SpotlightFront );
-            count++;
-        }else if(count == 1){
-            scene.remove(interMesh);
-            scene.add(dreamMesh);
-            count++;
-        }else if(count == 2){
-            scene.remove(dreamMesh);
-            scene.add(subwayMesh);
-            count ++;
-        }else if(count == 3){
-            scene.remove(subwayMesh);
-            scene.add(colorMesh);
-            scene.remove( SpotlightFront );
-            count = 0;
-        }
-    })
+    scene.add(colorMesh2);
+    scene.add(colorMesh3);
+    scene.add(colorMesh4);
+    scene.add(colorMesh5);
 
     //RENDER-------------------------------------------------------------------------------
     const renderScene = new function renderScene() {
@@ -90,11 +64,6 @@ function bg_3D() {
 
         
         colorMesh.rotation.y += 0.0035;
-        interMesh.rotation.y += 0.0035;
-        dreamMesh.rotation.y += 0.0035;
-        subwayMesh.rotation.y += 0.0035;
-
-
 
         renderer.render(scene,camera);
     }   
@@ -183,14 +152,12 @@ function contactBtn(){
 function Init(){
     // Three Js
     bg_3D();
-
-
     // Vanila Js
     scrollOpacity();
     navigation();
     contactBtn();
-    const greet = document.querySelector(".greet");
-    greet.style.height=window.innerHeight + "px";
+    // const greet = document.querySelector(".greet");
+    // greet.style.height=window.innerHeight + "px";
 }
 Init();
 

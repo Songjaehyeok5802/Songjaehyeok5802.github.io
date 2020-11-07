@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-
+body{overflow-X: hidden;}
 
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
 header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #000 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
@@ -40,8 +40,10 @@ section > article > div > div.story > video{width: 800px;}
 
 section > article > div > div.main3D{margin-top: 250px;}
 section > article > div > div.main3D > img{width: 1400px;}
-section > article > div > div.story3D{float: left; width: 7000px; margin:150px 0 300px;}
-section > article > div > div.story3D > img{width: 1000px; float: left;}
+section > article > div > div.story3D{float: left; width: 8000px; margin:150px 0 300px; position: relative;}
+section > article > div > div.story3D > div.story_wrap {position: relative; }
+section > article > div > div.story3D > div.story_wrap > img{width: 1400px; float: left; margin-right: 200px;}
+
 
 footer{margin: 300px 0 350px; text-align: center;}
 footer > a{color: #000; text-decoration: none; font-size: 200px; font-weight: 100;}
