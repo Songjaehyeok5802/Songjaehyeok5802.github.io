@@ -24,8 +24,8 @@ function bg_3D() {
 
     //LIGHT-------------
     const SpotlightDown = new THREE.PointLight( 0xffffff, 1); 
-    const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 3); 
-    const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 3); 
+    const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 1); 
+    const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 1); 
     const SpotlightUp = new THREE.PointLight( 0xffffff, 1);  
     const SpotlightFront = new THREE.PointLight( 0xffffff, 1.2);  
     scene.add( SpotlightDown );
@@ -40,7 +40,7 @@ function bg_3D() {
     SpotlightFront.position.set(10, 0, 0);
 
 
-    const geoSphere = new THREE.SphereGeometry( 1.5, 30, 30);
+    const geoSphere = new THREE.SphereGeometry( 1.5, 10, 10);
     const matColor = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
     const colorMesh = new THREE.Mesh(geoSphere, matColor);
     colorMesh.position.set(0, 0, 0);
