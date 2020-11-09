@@ -6,8 +6,8 @@
 
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
 header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #000 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
-header > nav.nav{float: right; margin-right: 80px; cursor: pointer;}
-header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right;}
+header > nav.nav{float: right; margin-right: 80px; ;}
+header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right; cursor: pointer;}
 header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: black; display:block; transition: 500ms;}
 header > nav.nav > div.nav_bar > span.nav_bar_1{}
 header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
@@ -22,14 +22,14 @@ header > nav > div.menu > ul > li > a{color: #000; text-decoration: none; font-w
 
 div.contact_popup{opacity: 0; pointer-events: none;}
 div.contact_popup > div.contact_bg{
-    position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.7; z-index: 2;
+    position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.7; z-index: 3;
 }
 div.contact_popup > div.contact_wrap{
     width: 500px; height: 500px; background-color: #fff; border-radius: 25px;
-    z-index: 3; position: fixed; top: 50%; left: 50%;
+    z-index: 4; position: fixed; top: 50%; left: 50%;
     transform: translate(-50%, -50%); 
 }
-div.contact_popup > div.contact_wrap > div.closeContact{width: 40px; height: 40px;float: right; margin: 25px 25px 0 0; position: relative;}
+div.contact_popup > div.contact_wrap > div.closeContact{width: 40px; height: 40px;float: right; margin: 25px 25px 0 0; position: relative; cursor: pointer;}
 div.contact_popup > div.contact_wrap > div.closeContact > span{display: block; background-color: black; width: 100%; height: 2px; border-radius: 1px; position: absolute; top: 25px;}
 div.contact_popup > div.contact_wrap > div.closeContact > span:first-child{transform: rotate(45deg);}
 div.contact_popup > div.contact_wrap > div.closeContact > span:last-child{transform: rotate(-45deg);}
@@ -37,7 +37,7 @@ div.contact_popup > div.contact_wrap > p{font-size: 20px; text-align: center; ma
 
 
 /*  article greet  */
-article.greet{height: 1080px;  pointer-events: none;}
+article.greet{height: 1080px;  }
 article.greet > p{
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; 
     line-height: 60px; font-weight: 400; color: #fff; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
@@ -56,16 +56,16 @@ article.greet > div > p.scrollTxt{
     position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%; font-family: 'Noto Sans KR'; font-weight: 500;
 }
 
-article.greet > div.btnArrow{width: 25px; height: 50px; position: fixed; top: 50%; transform: translateY(-50%); z-index: 2; cursor: pointer;}
-article.greet > div.btnArrow > span{width: 25px; height: 1px; background-color: #000; position: relative; display: block; top: 50%; transform: translateY(-50%);}
+article.greet > div.btnArrow{width: 25px; height: 50px; position: fixed; top: 50%; transform: translateY(-50%); z-index: 5; cursor: pointer;}
+article.greet > div.btnArrow > span{width: 25px; height: 2px; background-color: #000; position: relative; display: block; top: 50%; transform: translateY(-50%);}
 article.greet > div.btnRight{right: 0;  margin-right: 60px;}
-article.greet > div.btnRight > span:first-child{transform: rotate(45deg); top: 17%; }
+article.greet > div.btnRight > span:first-child{transform: rotate(45deg); top: 19.5%; }
 article.greet > div.btnRight > span:last-child{transform: rotate(-45deg);}
 article.greet > div.btnLeft{left: 0; margin-left: 60px;}
-article.greet > div.btnLeft > span:first-child{transform: rotate(-45deg); top: 17%; }
+article.greet > div.btnLeft > span:first-child{transform: rotate(-45deg); top: 19.5%;}
 article.greet > div.btnLeft > span:last-child{transform: rotate(45deg);}
 
-article.greet > div#bg_3D{position: fixed; z-index: -1;}
+article.greet > div#bg_3D{position: fixed; z-index: -3;}
 @keyframes scrollAni{
     0%{bottom: 100px; opacity: 0;width: 5px; height: 5px;}
     100%{bottom: 50px; opacity: 1;width: 10px; height: 10px;}

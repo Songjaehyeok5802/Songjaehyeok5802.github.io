@@ -60,29 +60,51 @@ function bg_3D() {
     const matSubway = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false, map: textureSubway});
     const subwayMesh = new THREE.Mesh(geoSphere, matSubway);
     subwayMesh.position.set(0, 0, 0);
+    
 
     let count = 0;
-    window.addEventListener("click", ()=>{
+    const btnRight = $("div.btnRight");
+    const btnLeft = $("div.btnLeft");
+    btnRight.click(()=>{
         if(count == 0){
             scene.remove(colorMesh);
             scene.add(interMesh);
             scene.add( SpotlightFront );
-            count++;
         }else if(count == 1){
             scene.remove(interMesh);
             scene.add(dreamMesh);
-            count++;
         }else if(count == 2){
             scene.remove(dreamMesh);
             scene.add(subwayMesh);
-            count ++;
         }else if(count == 3){
             scene.remove(subwayMesh);
             scene.add(colorMesh);
             scene.remove( SpotlightFront );
-            count = 0;
+            count = -1;
         }
-    })
+        count ++ ;
+    });
+    btnLeft.click(()=>{
+        if(count == 0){
+            scene.remove(colorMesh);
+            scene.add(subwayMesh);
+            scene.add( SpotlightFront );
+            count = 4;
+        }else if(count == 1){
+            scene.remove(interMesh);
+            scene.add(colorMesh);
+            scene.remove( SpotlightFront );
+        }else if(count == 2){
+            scene.remove(dreamMesh);
+            scene.add(interMesh);
+        }else if(count == 3){
+            scene.remove(subwayMesh);
+            scene.add(dreamMesh);
+        }
+        count -- ;
+    });
+
+
 
     //RENDER-------------------------------------------------------------------------------
     const renderScene = new function renderScene() {
@@ -102,15 +124,21 @@ function bg_3D() {
 
 // 배경 스크롤 블러처리
 function scrollOpacity(){
-    const bg = document.querySelector("#bg_3D");
+    const bg = document.querySelector("#bg_3D"),
+          btnRight = document.querySelector("div.btnRight"),
+          btnLeft = document.querySelector("div.btnLeft");
     const checkpoint = window.innerHeight;
     window.addEventListener("scroll", () => {
       const currentScroll = window.scrollY;
     
       if (currentScroll < checkpoint) {
         bg.style.opacity = 1.3 - currentScroll / checkpoint;
+        btnRight.style.opacity = 1.3 - currentScroll / checkpoint;
+        btnLeft.style.opacity = 1.3 - currentScroll / checkpoint;
       } else {
         bg.style.opacity = 0.1;
+        btnRight.style.opacity = 0.1;
+        btnLeft.style.opacity = 0.1;
       }
     });
 }

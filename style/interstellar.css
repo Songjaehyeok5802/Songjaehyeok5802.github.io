@@ -38,7 +38,8 @@ section > article > div > div.about > video{width: 800px;}
 section > article > div > div.story{text-align: right; margin-top: 150px;}
 section > article > div > div.story > video{width: 800px;}
 
-section > article > div > div.main3D{margin-top: 250px;}
+section > article > div > p.explain3D{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px; margin-top: 200px;}
+section > article > div > div.main3D{margin-top: 100px;}
 section > article > div > div.main3D > img{width: 1400px;}
 section > article > div > div.story3D{float: left; width: 8000px; margin:150px 0 300px; position: relative;}
 section > article > div > div.story3D > div.story_wrap {position: relative; }
