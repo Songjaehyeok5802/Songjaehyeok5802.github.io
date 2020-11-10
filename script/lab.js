@@ -5,7 +5,7 @@ function bg_3D() {
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
     const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true});
     document.getElementById("bg_3D").appendChild(renderer.domElement);
-    // control = new THREE.OrbitControls(camera, renderer.domElement);
+    control = new THREE.OrbitControls(camera, renderer.domElement);
 
     //SIZE ---------
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -19,7 +19,7 @@ function bg_3D() {
     renderer.setClearColor( 0x000000, 0 );
 
     //CAMERA--------
-    camera.position.set(3, 0, 0);
+    camera.position.set(0, 3, 0);
     camera.lookAt(scene.position);  
 
     //LIGHT-------------
@@ -58,13 +58,17 @@ function bg_3D() {
     scene.add(colorMesh4);
     scene.add(colorMesh5);
 
+    var t = 0;
     //RENDER-------------------------------------------------------------------------------
     const renderScene = new function renderScene() {
         requestAnimationFrame(renderScene);
 
         
         colorMesh.rotation.y += 0.0035;
-
+        t += 0.01;  
+        camera.position.x = 20*Math.cos(t) + 0;
+        camera.position.z = 20*Math.sin(t) + 0;
+        camera.lookAt(0, 0, 0);
         renderer.render(scene,camera);
     }   
 }
