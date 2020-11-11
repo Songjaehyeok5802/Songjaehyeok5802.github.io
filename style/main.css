@@ -25,7 +25,7 @@ div.contact_popup > div.contact_bg{
     position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.7; z-index: 3;
 }
 div.contact_popup > div.contact_wrap{
-    width: 500px; height: 500px; background-color: #fff; border-radius: 25px;
+    width: 500px; height: 300px; background-color: #fff; border-radius: 25px;
     z-index: 4; position: fixed; top: 50%; left: 50%;
     transform: translate(-50%, -50%); 
 }
@@ -33,8 +33,13 @@ div.contact_popup > div.contact_wrap > div.closeContact{width: 40px; height: 40p
 div.contact_popup > div.contact_wrap > div.closeContact > span{display: block; background-color: black; width: 100%; height: 2px; border-radius: 1px; position: absolute; top: 25px;}
 div.contact_popup > div.contact_wrap > div.closeContact > span:first-child{transform: rotate(45deg);}
 div.contact_popup > div.contact_wrap > div.closeContact > span:last-child{transform: rotate(-45deg);}
-div.contact_popup > div.contact_wrap > p{font-size: 20px; text-align: center; margin: 200px auto 0;}
-
+div.contact_popup > div.contact_wrap > div.contact_txt{
+    display: inline-block; position: absolute; bottom: 50px; left: 30px; font-size: 16px;
+}
+div.contact_popup > div.contact_wrap > div.contact_txt > p{ line-height: 25px; margin-bottom: 30px;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul{}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 7px;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000; text-decoration: none;}
 
 /*  article greet  */
 article.greet{height: 1080px;  }
@@ -84,7 +89,7 @@ article.work > div > div.title > a{
     margin-bottom: 15px;
 }
 article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-family:'Noto Sans KR'; text-transform: none; display: block;}
-article > div > img{width: 1000px; position: absolute; right: 0;}
+article > div > a > img{width: 1000px; position: absolute; right: 0;}
 
 /* article */
 article.interstellar{}
@@ -93,7 +98,7 @@ article.interstellar > a{}
 article.dream{}
 article.dream > div.title{}
 article.dream > div > div.title{right: 0;}
-article.dream > div > img{left: 0;}
+article.dream > div > a >img{left: 0;}
 
 article.subway{}
 article.subway > div.title{}
