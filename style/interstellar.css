@@ -24,8 +24,8 @@ section > div.title{font-size: 300px; font-weight: 700; color: #4c4c4c; margin: 
 section > article{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
 section > article > img.mainImg{width: 1400px; padding-top: 500px;}
 section > article > div.sticky_wrap{ margin-top: 50px;}
-section > article > div > div.sticky_Title{position: sticky; font-size: 30px; top: 50px; font-family: "Cormorant Garamond";}
-section > article > div > div.txtwrap{ margin: 50px 0 90px;}
+section > article > div > div.sticky_Title{position: sticky; font-size: 30px; top: 50px; font-family: "Cormorant Garamond"; }
+section > article > div > div.txtwrap{ margin: 50px 0 90px; }
 section > article > div > div > ul{margin: 90px auto 90px;height: 65px;}
 section > article > div > div > ul > li{font-size: 20px; line-height: 35px; font-weight: 300; text-align: left;font-family: 'Noto Sans KR';}
 section > article > div > div > ul > li > span{font-weight: 600; font-family: "Cormorant Garamond";}
@@ -41,10 +41,13 @@ section > article > div > div.story > video{width: 800px;}
 section > article > div > p.explain3D{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px; margin-top: 200px;}
 section > article > div > div.main3D{margin-top: 100px;}
 section > article > div > div.main3D > img{width: 1400px;}
-section > article > div > div.story3D{float: left; width: 8000px; margin:150px 0 300px; position: relative;}
-section > article > div > div.story3D > div.story_wrap {position: relative; }
+
+section > article > div > div.story3D{float: left; margin:150px 0 300px; position: relative; }
+/* section > article > div > div.story3D > div.story_wrap {position: sticky;  top: 150px;} */
 section > article > div > div.story3D > div.story_wrap > img{width: 1400px; float: left; margin-right: 200px;}
+
+.scrollAni{opacity: 0; transition: 1200ms;}
 
 
 footer{margin: 300px 0 350px; text-align: center;}
-footer > a{color: #000; text-decoration: none; font-size: 200px; font-weight: 100;}
+footer > a{color: #000; text-decoration: none; font-size: 200px;padding: 50px;font-weight: 100;}
