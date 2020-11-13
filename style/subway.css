@@ -1,9 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
 
 div.cursor{position: absolute; opacity: 0; width: 0px; height: 0px;transform: translate(-50%, -50%); z-index: -1; border-radius: 50%;}
 div.activeBgImg{
@@ -13,16 +8,6 @@ div.activeBgImg{
     0%{}
     100%{width: 500px; height: 500px; background: url("../img/project/interstellar/2D/Main.png"); background-position: center; background-size: cover; opacity: 1;}
 }
-
-header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
-header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #000 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
-header > nav.nav{float: right; margin-right: 80px;}
-header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden;}
-header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: black; display:block; transition: 500ms;}
-header > nav.nav > div.nav_bar > span.nav_bar_1{}
-header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
-header > nav.nav > div.nav_bar > span.nav_bar_3{width: 50%; float: right;}
-
 
 
 section{width: 100%; height: 100%; top: 0;}
@@ -42,8 +27,6 @@ section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p.explain{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
 section > article > div > div > a{text-align: left; font-weight: 400; font-size: 23px; color: #000; float: left; margin: 40px 0 80px;}
 section > article > div > img.subImg{width: 1400px;}
-
-.scrollAni{opacity: 0; transition: 1200ms;}
 
 footer{margin: 300px 0 350px; text-align: center;}
 footer > a{color: #000; text-decoration: none; font-size: 200px; font-weight: 100; z-index: 1; padding: 50px;}

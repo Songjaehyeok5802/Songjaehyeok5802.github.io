@@ -1,3 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+ 
+
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
 header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #000 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
 header > nav.nav{float: right; margin-right: 80px; ;}
@@ -35,5 +42,4 @@ div.contact_popup > div.contact_wrap > div.contact_txt > ul{}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 7px;}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000; text-decoration: none;}
 
-
-
+.scrollAni{opacity: 0; transition: 1200ms;}

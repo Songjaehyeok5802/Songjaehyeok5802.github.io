@@ -1,9 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-
 /*  article greet  */
 article.greet{height: 1080px;  }
 article.greet > p{
@@ -65,5 +60,3 @@ article.dream > div > a >img{left: 0;}
 
 article.subway{}
 article.subway > div.title{}
-
-.scrollAni{opacity: 0; transition: 1200ms;}

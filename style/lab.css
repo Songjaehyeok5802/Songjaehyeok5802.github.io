@@ -1,16 +1,18 @@
 
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-body{overflow-x: hidden;}
-
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
-header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #000 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
-header > nav.nav{float: right; margin-right: 80px;}
-header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right;}
-header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: black; display:block; transition: 500ms;}
+header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #fff; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
+header > nav.nav{float: right; margin-right: 80px; ;}
+header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right; cursor: pointer;}
+header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: #fff; display:block; transition: 500ms;}
 header > nav.nav > div.nav_bar > span.nav_bar_1{}
 header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
 header > nav.nav > div.nav_bar > span.nav_bar_3{width: 50%; float: right;}
@@ -19,33 +21,46 @@ header > nav > div.menu{text-align: right; margin-top: 60px; transition: 800ms; 
 header > nav > div.active{opacity: 1; pointer-events: all;}
 header > nav > div.menu > ul{}
 header > nav > div.menu > ul > li{margin-bottom: 20px;}
-header > nav > div.menu > ul > li > a{color: #000; text-decoration: none; font-weight: 500; font-size: 20px;}
+header > nav > div.menu > ul > li > a{color: #fff; text-decoration: none; font-weight: 500; font-size: 20px;}
 
 
 div.contact_popup{opacity: 0; pointer-events: none;}
 div.contact_popup > div.contact_bg{
-    position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.7; z-index: 2;
+    position: fixed; width: 100%; height: 100%; background-color: #fff;opacity: 0.7; z-index: 3;
 }
 div.contact_popup > div.contact_wrap{
-    width: 500px; height: 500px; background-color: #fff; border-radius: 25px;
-    z-index: 3; position: fixed; top: 50%; left: 50%;
+    width: 500px; height: 300px; background-color: #fff; border-radius: 25px;
+    z-index: 4; position: fixed; top: 50%; left: 50%;
     transform: translate(-50%, -50%); 
 }
-div.contact_popup > div.contact_wrap > div.closeContact{width: 40px; height: 40px;float: right; margin: 25px 25px 0 0; position: relative;}
+div.contact_popup > div.contact_wrap > div.closeContact{width: 40px; height: 40px;float: right; margin: 25px 25px 0 0; position: relative; cursor: pointer;}
 div.contact_popup > div.contact_wrap > div.closeContact > span{display: block; background-color: black; width: 100%; height: 2px; border-radius: 1px; position: absolute; top: 25px;}
 div.contact_popup > div.contact_wrap > div.closeContact > span:first-child{transform: rotate(45deg);}
 div.contact_popup > div.contact_wrap > div.closeContact > span:last-child{transform: rotate(-45deg);}
-div.contact_popup > div.contact_wrap > p{font-size: 20px; text-align: center; margin: 200px auto 0;}
+div.contact_popup > div.contact_wrap > div.contact_txt{
+    display: inline-block; position: absolute; bottom: 50px; left: 30px; font-size: 16px;
+}
+div.contact_popup > div.contact_wrap > div.contact_txt > p{ line-height: 25px; margin-bottom: 30px;color: #000;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul{}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 7px; color: #000;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000; text-decoration: none;}
+
+.scrollAni{opacity: 0; transition: 1200ms;}
+body{overflow-x: hidden; }
+
+div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-delay: 500ms;}
+@keyframes changeBg{
+    0%{background-color: #fff;}
+    100%{background-color: #000;}
+}
 
 
-
-div#bg_3D{position: fixed;}
 
 /*  article greet  */
 article.greet{pointer-events: none; height: 1080px;}
 article.greet > p{
     position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; 
-    line-height: 60px; font-weight: 400; color: #000; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
+    line-height: 60px; font-weight: 400; color: #fff; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
     animation: startGreet 2s forwards linear; font-family: 'Nanum Myeongjo'; user-select: none;
 }
 @keyframes startGreet{
@@ -54,11 +69,11 @@ article.greet > p{
 }
 article.greet > div.scrollArea{position: absolute; left: 50%; transform: translateX(-50%);bottom: 20px; width: 100px; height: 100px;}
 article.greet > div > span.scrollDot{
-    display: block; position: absolute; width: 10px; height: 10px; background-color: #5e5e5e; left: 50%; transform: translateX(-50%);
+    display: block; position: absolute; width: 10px; height: 10px; background-color: #fff; left: 50%; transform: translateX(-50%);
     border-radius: 50%; animation: scrollAni 1.5s ease-in-out infinite;
 }
 article.greet > div > p.scrollTxt{
-    position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%; font-family: 'Noto Sans KR'; font-weight: 500;
+    position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%; font-family: 'Noto Sans KR'; font-weight: 500; color: #fff;
 }
 
 @keyframes scrollAni{
@@ -70,13 +85,17 @@ article.greet > div > p.scrollTxt{
 
 
 /*  article project common  */
-article.work{position: relative; height: 800px;}
+article.work{position: relative; height: 900px;}
 article.work > div{
     position: relative; margin: 0 auto; width: 1400px; height: 550px; top: 20%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 article.work > div > div.title{}
 article.work > div > div.title > p{
-    color: #000; font-size: 25px;line-height: 35px; margin-top: 30px; text-align: center;
+    color: #fff; font-size: 25px;line-height: 35px; margin-top: 80px; text-align: center;
 }
-article > div > img{width: 1000px; box-shadow: 0 0  30px #e3e3e3, 0 0 30px #e3e3e3;}
+article > div > a > img{width: 1000px; box-shadow: 0 0  30px #e3e3e3, 0 0 30px #e3e3e3; border: 2px solid #fff;}
 
 article.last{margin-bottom: 150px;}
+
+
+
+

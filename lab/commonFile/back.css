@@ -1,0 +1,11 @@
+button.closeBtn{
+    position: absolute; width: 70px; height: 70px; border: 1px solid #000; bottom: 0; z-index: 99; outline: none; cursor: pointer;
+    background: transparent; border-radius: 50%; margin: 0 0 60px 60px; display: flex; justify-content: center; align-items: center;
+}
+button.closeBtn > span{position: relative;transition: 500ms; transform-origin: 50% 0; transform-style: preserve-3d;}
+button.closeBtn > span::after{
+    position: absolute; content: "Back"; color: #000;transform: rotateX(-90deg);
+    transform-origin: 50% 0; transition: 500ms; top: 100%; left: 0;
+}
+button.closeBtn:hover > span{transform: rotateX(90deg)}
+button.closeBtn:hover > span::after{}

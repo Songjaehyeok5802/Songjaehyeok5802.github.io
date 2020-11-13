@@ -78,7 +78,6 @@ window.addEventListener("scroll", ()=>{
       activeEl_i = activeEl[i];
       boundingRect = activeEl[i].getBoundingClientRect();
       if(boundingRect.top < window.innerHeight * 0.8){
-        console.log(activeEl_i.dataset.index);
         activeEl[activeEl_i.dataset.index].style.opacity = 1;
       }
     }

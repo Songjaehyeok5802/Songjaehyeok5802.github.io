@@ -1,53 +1,43 @@
 
 
 const checkpoint = window.innerHeight - 500;
-const explain = $("div.txtwrap"),
-      about = $("div.about"),
-      sticky_Title = $("div.sticky_Title"),
-      story = $("div.story"),
-      explain3D = $("p.explain3D"),
-      main3D = $("div.main3D");
-
 window.addEventListener("scroll", () => {
-  const currentScroll = window.scrollY;
+  let currentScroll = window.scrollY;
   if (currentScroll <= checkpoint) {
     opacityG = 1 - currentScroll / checkpoint;
   } else {
     opacityG = 0;
   }
   document.querySelector(".title").style.opacity = opacityG;
-
-
   
   
   
-  // let scrollTop = $(document).scrollTop();
-  // // let scrollLeft = $(document).scrollLeft();
-  // preCount = count;
-  // count = scrollTop;
-  // if (currentScroll >= 4170 && preCount < count) {
-  //   test2 = test - (count- preCount);
-  //   test = test2;
-  //   console.log(test);
-  //   story3D.css("right", test);
-
-  // } else if(currentScroll >= 4170 && preCount > count){
-  // }
   
+  
+  
+  let storyPosY = Math.max(0, currentScroll - story3D.offset().top);
+  story_wrap.css({"transform" : "translateX(" + -1 * storyPosY +"px)"});
+  console.log(storyPosY);
+  if(currentScroll >= story3D.offset().top  && currentScroll < story3D.offset().top + story3D.innerHeight()){
+    if(storyPosY < 6400){
+      story_wrap.css({"position" : "fixed", "top" : 150 + "px" , "height" : 768, "transform" : "translateX(" + -1 * storyPosY +"px)"});
+    }else{
+      story_wrap.css({"position" : "relative", "top" : 150 + "px" , "height" : 768, "transform" : "translateX(" + -6400+"px) translateY("+ 6400 + "px)"});
+    }
+  }else{
+    story_wrap.css({"position" : "absolute"});
+  }
   
 });
 
-
-
-
-let test = 6412;
-let count = 0;
-    preCount = 0;
-    i = 0;
-const winH = window.innerHeight;
-const winW = window.innerWidth;
 const story3D = $("div.story3D");
-story3D.css({"width" : 8000});
+const story_wrap = $("div.story_wrap");
+
+story3D.css({"width" : 8000, "height" : 7200});
+
+
+
+
 
 
 
