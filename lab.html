@@ -7,12 +7,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="./img/shortcut.png"/>
     <title>SJH LAB</title>
     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/lab.css">
 </head>
 
 
 <body>
 
+    
     
     <div class="contact_popup">
         <div class="contact_bg"></div>
@@ -21,10 +23,17 @@
                 <span></span>
                 <span></span>
             </div>
-            <p>
-                감사합니다.  <br />
-                송재혁입니다.
-            </p>
+            <div class="contact_txt">
+                <p>
+                    감사합니다.  <br />
+                    개발자 송재혁입니다.
+                </p>
+                <ul>
+                    <li>Tel . 010 3932 5802</li>
+                    <li>Email . <a href="mailto:wakij6587@naver.com">wakij6587@naver.com</a> </li>
+                    <li>Web . <a href="https://songjaehyeok5802.github.io/main.html">https://songjaehyeok5802.github.io/main.html</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -44,7 +53,7 @@
                     <li class="about menu"><a href="./about.html">About</a></li>
                     <li class="contact menu"><a href="#">Contact</a></li>
                     <li class=" menu"><a href="./resume/SongJaeHyeok.pdf" download>Resume</a></li>
-                    <li class="menu"><a href="#">Lab</a></li>
+                    <li class="menu"><a href="./lab.html">Lab</a></li>
                 </ul>
             </div>
         </nav>
@@ -67,35 +76,39 @@
         </article>
 
         <!-- project -->
-        <article class="interstellar work">
+        <article class="work">
             <div class="warp">
+                <img src="./img/lab/changeColor.png" alt="썸네일">
                 <div class="title">
-                    <a href="./interstellar.html">Interstellar</a>
-                    <span>WEB DESIGN</span>
+                    <p>
+                        사용자가 원하는 색깔을 입력하면 값을 받아와 해당 색으로 변하게 만든 프로젝트입니다.
+                    </p>
                 </div>
-                <img src="./img/project/interstellar/2D/Main.png" alt="인터스텔라 썸네일">
             </div>
         </article>
         
         
-        <article class="dream work">
+        <article class="work">
             <div class="warp">
-                <img src="./img/project/dream/Main.png" alt="꿈 썸네일">
+                <img src="./img/lab/lineWave.png" alt="썸네일">
                 <div class="title">
-                    <a href="./dream.html">Dream</a>
-                    <span>WEB GAME</span>
+                    <p>
+                        Plane을 와이어 프레임으로 만든 후 간 구간마다 위아래로 반복운동을 시켰습니다. <br />
+                        그 후 더 잘 보이게 하기 위하여 바닥과 빛, 그림자를 추가하였습니다.
+                    </p>
                 </div>
             </div>
         </article>
 
 
-        <article class="subway work">
+        <article class="work last">
             <div class="warp">
+                <img src="./img/lab/img3D.png" alt="썸네일">
                 <div class="title">
-                    <a href="./subway.html">Subway</a>
-                    <span>MIRROR DISPLAY</span>
+                    <p>
+                        2D 이미지를 가져와 Plane에 맵핑 시킨 후 음영에 따라 굴곡을 주었습니다. <br />
+                    </p>
                 </div>
-                <img src="./img/project/subway/subway_2.png" alt="지하철 썸네일">
             </div>
         </article>
     </section>
@@ -105,6 +118,7 @@
     <script src="./vendor/three.min.js"></script>
     <script src="./vendor/OrbitControls.js"></script>
     <script src="./vendor/jquery.min.js"></script>
+    <script src="./script/common.js"></script>
     <script src="./script/lab.js"></script>
 </body>
 

@@ -8,50 +8,50 @@ new hoverEffect({
     displacementImage:"./img/profile_Img/effect.png"
 });
 
-function img3D() {
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-    var renderer = new THREE.WebGLRenderer({ alpha: true });
-    document.getElementById("img3D").appendChild(renderer.domElement);
-    control = new THREE.OrbitControls(camera, renderer.domElement);
+// function img3D() {
+//     var scene = new THREE.Scene();
+//     var camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+//     var renderer = new THREE.WebGLRenderer({ alpha: true });
+//     document.getElementById("img3D").appendChild(renderer.domElement);
+//     control = new THREE.OrbitControls(camera, renderer.domElement);
 
-    //SIZE ---------
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    window.addEventListener("resize", function(){
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        renderer.setSize(width, height);
-        camera.aspect = width/height;
-        camera.updateProjectionMatrix();
-    })
-    renderer.setClearColor( 0x000000, 0 );
+//     //SIZE ---------
+//     renderer.setSize(window.innerWidth, window.innerHeight);
+//     window.addEventListener("resize", function(){
+//         var width = window.innerWidth;
+//         var height = window.innerHeight;
+//         renderer.setSize(width, height);
+//         camera.aspect = width/height;
+//         camera.updateProjectionMatrix();
+//     })
+//     renderer.setClearColor( 0x000000, 0 );
 
-    //CAMERA--------
-    camera.position.set(0, 0, 20);
-    camera.lookAt(scene.position);  
+//     //CAMERA--------
+//     camera.position.set(0, 0, 20);
+//     camera.lookAt(scene.position);  
 
-    //LIGHT-------------
-    var ambientLight = new THREE.AmbientLight(0xffffff);
-    scene.add(ambientLight);
+//     //LIGHT-------------
+//     var ambientLight = new THREE.AmbientLight(0xffffff);
+//     scene.add(ambientLight);
 
     
-    const geometry = new THREE.PlaneGeometry(30, 30, 300, 300);
-    const material = new THREE.MeshPhongMaterial()
-    const test = new THREE.TextureLoader().load("../img/img.png")
-    material.displacementMap = test;
-    material.side = THREE.DoubleSide;
-    material.wireframe = true;
-    material.map = test;
-    var plane = new THREE.Mesh( geometry, material);
-    scene.add(plane);
+//     const geometry = new THREE.PlaneGeometry(30, 30, 300, 300);
+//     const material = new THREE.MeshPhongMaterial()
+//     const test = new THREE.TextureLoader().load("../img/img.png")
+//     material.displacementMap = test;
+//     material.side = THREE.DoubleSide;
+//     material.wireframe = true;
+//     material.map = test;
+//     var plane = new THREE.Mesh( geometry, material);
+//     scene.add(plane);
 
 
-    //RENDER-------------------------------------------------------------------------------
-    var renderScene = new function renderScene() {
-        requestAnimationFrame(renderScene);
-        renderer.render(scene,camera);
-    }   
-}
+//     //RENDER-------------------------------------------------------------------------------
+//     var renderScene = new function renderScene() {
+//         requestAnimationFrame(renderScene);
+//         renderer.render(scene,camera);
+//     }   
+// }
 // img3D();
 
 
@@ -106,13 +106,13 @@ function bg_3D() {
         requestAnimationFrame(renderScene);
 
         if(camera.position.x > 0){
-            camera.position.x -=0.01;
+            camera.position.x -=0.02;
         }
         if(camera.position.y < 0.5){
-            camera.position.y +=0.01;
+            camera.position.y +=0.02;
         }
         if(camera.position.z < 3){
-            camera.position.z +=0.01;
+            camera.position.z +=0.02;
         }
         camera.lookAt(0, 0, 0);
 

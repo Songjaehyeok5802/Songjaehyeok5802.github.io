@@ -70,25 +70,13 @@ article.greet > div > p.scrollTxt{
 
 
 /*  article project common  */
-article.work{position: relative; height: 1080px;}
+article.work{position: relative; height: 800px;}
 article.work > div{
-    position: relative; margin: 0 auto; width: 1400px; height: 550px; top: 20%; display: flex; justify-content: space-between;}
-article.work > div > div.title{position: absolute; bottom: 0;}
-article.work > div > div.title > a{
-    font-size: 70px; font-weight: 700; text-decoration: none; color: black; font-family: "Cormorant Garamond"; display: block;
-    margin-bottom: 15px;
+    position: relative; margin: 0 auto; width: 1400px; height: 550px; top: 20%; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+article.work > div > div.title{}
+article.work > div > div.title > p{
+    color: #000; font-size: 25px;line-height: 35px; margin-top: 30px; text-align: center;
 }
-article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-family:'Noto Sans KR'; text-transform: none; display: block;}
-article > div > img{width: 1000px; position: absolute; right: 0;}
+article > div > img{width: 1000px; box-shadow: 0 0  30px #e3e3e3, 0 0 30px #e3e3e3;}
 
-/* article */
-article.interstellar{}
-article.interstellar > a{}
-
-article.dream{}
-article.dream > div.title{}
-article.dream > div > div.title{right: 0;}
-article.dream > div > img{left: 0;}
-
-article.subway{}
-article.subway > div.title{}
+article.last{margin-bottom: 150px;}

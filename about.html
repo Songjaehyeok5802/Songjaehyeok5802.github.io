@@ -6,6 +6,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="./img/shortcut.png"/>
     <title>SJH Portfolio</title>
     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/common.css">
     <link rel="stylesheet" href="./style/about.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
@@ -13,6 +14,28 @@
 
 <body>
     
+    
+    <div class="contact_popup">
+        <div class="contact_bg"></div>
+        <div class="contact_wrap">
+            <div class="closeContact">
+                <span></span>
+                <span></span>
+            </div>
+            <div class="contact_txt">
+                <p>
+                    감사합니다.  <br />
+                    개발자 송재혁입니다.
+                </p>
+                <ul>
+                    <li>Tel . 010 3932 5802</li>
+                    <li>Email . <a href="mailto:wakij6587@naver.com">wakij6587@naver.com</a> </li>
+                    <li>Web . <a href="https://songjaehyeok5802.github.io/main.html">https://songjaehyeok5802.github.io/main.html</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <header>
         <a href="main.html" class="logo">
             XY&Z
@@ -22,6 +45,15 @@
                 <span class="nav_bar_1"></span>
                 <span class="nav_bar_2"></span>
                 <span class="nav_bar_3"></span>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li class="about menu"><a href="./about.html">About</a></li>
+                    <li class="contact menu"><a href="#">Contact</a></li>
+                    <li class=" menu"><a href="./resume/SongJaeHyeok.pdf" download>Resume</a></li>
+                    <li class="menu"><a href="./lab.html">Lab</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -34,6 +66,7 @@
                 <div id="changeImg"></div>
             </div>
 
+            <!-- <img src="./img/profile_Img/profile.png" alt=""> -->
             <div class="txtWrap">
                 <p class="title">
                     X, Y
@@ -71,6 +104,8 @@
     <script src="./vendor/OrbitControls.js"></script>
     <script src="./vendor/TweenMax.min.js"></script>
     <script src="./vendor/hover-effect.umd.js"></script>
+    <script src="./vendor/jquery.min.js"></script>
+    <script src="./script/common.js"></script>
     <script src="./script/about.js"></script>
 </body>
 

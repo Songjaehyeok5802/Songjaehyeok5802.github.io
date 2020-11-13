@@ -19,10 +19,10 @@ nextBtn.mousemove( (e)=>{
   mouseX = e.pageX;
   mouseY = e.pageY;
   $("div.cursor").css({"top" : mouseY, "left" : mouseX});
-  $("div.cursor").addClass("active");
+  $("div.cursor").addClass("activeBgImg");
 });
 nextBtn.mouseleave(()=>{
-  $("div.cursor").removeClass("active");
+  $("div.cursor").removeClass("activeBgImg");
 });
   
 
