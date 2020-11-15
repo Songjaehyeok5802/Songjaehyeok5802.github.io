@@ -50,7 +50,7 @@ function navigation(){
 function contactBtn(){
   const a_Contact = $("li.contact"),
         contactEls = $("div.contact_popup"),
-        closeBtn = $("div.closeContact");
+        closeBtn = $("div.contact_bg");
 
   a_Contact.click(
       ()=>{
@@ -63,6 +63,22 @@ function contactBtn(){
       }
   )
 }
+
+
+document.addEventListener('mousemove', function(e){
+    let card_x = getTransformValue(e.clientX,window.innerWidth,56);
+    let card_y = getTransformValue(e.clientY,window.innerHeight,56);
+    let text_shadow_x = getTransformValue(e.clientX,window.innerWidth,28);
+    let text_shadow_y = getTransformValue(e.clientY,window.innerHeight,28);
+    $(".floating").css("transform","rotateX("+card_y+"deg) rotateY("+card_x+"deg)  translateZ(60px)");
+    $(".floating").css("box-shadow",-card_x+"px "+card_y+"px 55px rgba(255, 255, 255, .3)");
+    $(".text").css("text-shadow",-text_shadow_x+"px "+text_shadow_y+"px 6px rgba(0, 0, 0, .3)");
+  });
+function getTransformValue(v1,v2,value){
+return (v1/v2*value-value/2).toFixed(1);                        
+}
+
+
 
 navigation();
 contactBtn();

@@ -23,27 +23,30 @@ header > nav > div.menu > ul{}
 header > nav > div.menu > ul > li{margin-bottom: 20px;}
 header > nav > div.menu > ul > li > a{color: #fff; text-decoration: none; font-weight: 500; font-size: 20px;}
 
-
-div.contact_popup{opacity: 0; pointer-events: none;}
-div.contact_popup > div.contact_bg{
-    position: fixed; width: 100%; height: 100%; background-color: #fff;opacity: 0.7; z-index: 3;
+div.contact_popup{opacity: 0; pointer-events: none; transition: 500ms; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; position: fixed; z-index: 5;}
+div.contact_popup > div.contact_bg{position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.95; z-index: 6;
 }
 div.contact_popup > div.contact_wrap{
-    width: 500px; height: 300px; background-color: #fff; border-radius: 25px;
-    z-index: 4; position: fixed; top: 50%; left: 50%;
-    transform: translate(-50%, -50%); 
+    width: 500px; height: 300px; background-color: #fff; border-radius: 15px;
+    z-index: 7; position: fixed; 
+    box-shadow:0 0 40px #929292,0 0 40px #929292 ;
 }
-div.contact_popup > div.contact_wrap > div.closeContact{width: 40px; height: 40px;float: right; margin: 25px 25px 0 0; position: relative; cursor: pointer;}
-div.contact_popup > div.contact_wrap > div.closeContact > span{display: block; background-color: black; width: 100%; height: 2px; border-radius: 1px; position: absolute; top: 25px;}
-div.contact_popup > div.contact_wrap > div.closeContact > span:first-child{transform: rotate(45deg);}
-div.contact_popup > div.contact_wrap > div.closeContact > span:last-child{transform: rotate(-45deg);}
+div.contact_popup > div.contact_wrap > div.logo{float: right; margin: 50px 50px 0 0; transform: translateZ(60px); font-size: 30px; font-family: "Cormorant Garamond";}
 div.contact_popup > div.contact_wrap > div.contact_txt{
-    display: inline-block; position: absolute; bottom: 50px; left: 30px; font-size: 16px;
+    display: inline-block; position: absolute; bottom: 50px; left: 50px; font-size: 16px;
 }
-div.contact_popup > div.contact_wrap > div.contact_txt > p{ line-height: 25px; margin-bottom: 30px;color: #000;}
-div.contact_popup > div.contact_wrap > div.contact_txt > ul{}
-div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 7px; color: #000;}
+div.contact_popup > div.contact_wrap > div.contact_txt > p{ line-height: 25px; margin-bottom: 60px; transform: translateZ(80px);}
+div.contact_popup > div.contact_wrap > div.contact_txt > p > span{ line-height: 50px; font-size: 25px;transform: translateZ(30px);}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul{transform: translateZ(80px); float: left;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{margin-right: 30px;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px;}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000; text-decoration: none;}
+
+.floating{    
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+}
+
 
 .scrollAni{opacity: 0; transition: 1200ms;}
 body{overflow-x: hidden; }
@@ -59,12 +62,12 @@ div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-del
 /*  article greet  */
 article.greet{pointer-events: none; height: 1080px;}
 article.greet > p{
-    position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; 
+    position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px;  opacity: 0;
     line-height: 60px; font-weight: 400; color: #fff; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
-    animation: startGreet 2s forwards linear; font-family: 'Nanum Myeongjo'; user-select: none;
+    animation: startGreet 2s forwards linear; font-family: 'Nanum Myeongjo'; user-select: none; animation-delay: 1s;
 }
 @keyframes startGreet{
-    0%{opacity: 0; margin-top: 10px;}
+    0%{opacity: 0; margin-top: 15px;}
     100%{opacity: 1; margin-top: 0px;}
 }
 article.greet > div.scrollArea{position: absolute; left: 50%; transform: translateX(-50%);bottom: 20px; width: 100px; height: 100px;}
@@ -92,7 +95,7 @@ article.work > div > div.title{}
 article.work > div > div.title > p{
     color: #fff; font-size: 25px;line-height: 35px; margin-top: 80px; text-align: center;
 }
-article > div > a > img{width: 1000px; box-shadow: 0 0  30px #e3e3e3, 0 0 30px #e3e3e3; border: 2px solid #fff;}
+article > div > a > img{width: 1000px; box-shadow: 0 0  30px #e3e3e3, 0 0 30px #e3e3e3; border: 5px solid #fff;}
 
 article.last{margin-bottom: 150px;}
 

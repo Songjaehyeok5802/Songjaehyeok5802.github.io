@@ -38,7 +38,7 @@ article.greet > div#bg_3D{position: fixed; z-index: -3;}
 
 
 /*  article project common  */
-article.work{position: relative; height: 1080px;}
+article.work{position: relative; height: 900px;}
 article.work > div{
     position: relative; margin: 0 auto; width: 1400px; height: 550px; top: 20%; display: flex; justify-content: space-between;}
 article.work > div > div.title{position: absolute; bottom: 0;}
@@ -50,6 +50,13 @@ article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-fa
 article > div > a > img{width: 1000px; position: absolute; right: 0;}
 
 /* article */
+
+article.dream{}
+article.dream > div.title{}
+article.dream > div > div.title{right: 0; text-align: right;}
+article.dream > div > a >img{left: 0;}
+
+
 article.interstellar{}
 article.interstellar > a{}
 

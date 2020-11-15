@@ -4,21 +4,20 @@
 section{width: 100%; height: 100%; top: 0;}
 section > div.title{font-size: 300px; font-weight: 700; color: #4c4c4c; margin: 200px 0 0 180px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
 
+
 section > article{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
 section > article > img.mainImg{width: 1400px; padding-top: 500px;}
 section > article > div.sticky_wrap{ margin-top: 50px;}
 section > article > div > div.sticky_Title{position: sticky; font-size: 30px; top: 50px; font-family: "Cormorant Garamond";}
-section > article > div > div.txtwrap{ margin: 50px 0 150px;}
+section > article > div > div.txtwrap{ margin: 50px 0 90px;}
 section > article > div > div > ul{margin: 90px auto 90px;height: 65px;}
 section > article > div > div > ul > li{font-size: 20px; line-height: 35px; font-weight: 300; text-align: left;font-family: 'Noto Sans KR';}
 section > article > div > div > ul > li > span{font-weight: 600; font-family: "Cormorant Garamond";}
 section > article > div > div > ul > li:first-child{float: left;}
 section > article > div > div > ul > li:last-child{float: right;}
-section > article > div > div > p{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
-
-section > article > div > div.subImg{ margin-bottom: 200px; text-align: left;display: flex; align-items: center;}
-section > article > div > div.subImg > img{width: 800px;}
-section > article > div > div.subImg > p{ margin-left: 50px;}
+section > article > div > div > p.explain{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
+section > article > div > div > a{text-align: left; font-weight: 400; font-size: 23px; color: #000; float: left; margin: 40px 0 80px;}
+section > article > div > img.subImg{width: 1400px;}
 
 footer{margin: 300px 0 350px; text-align: center;}
-footer > a{color: #000; text-decoration: none; font-size: 200px;padding: 50px; font-weight: 100;}
+footer > a{color: #000; text-decoration: none; font-size: 200px; font-weight: 100; z-index: 1; padding: 50px;}
