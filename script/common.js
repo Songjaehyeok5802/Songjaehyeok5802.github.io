@@ -64,7 +64,13 @@ function contactBtn(){
   )
 }
 
-
+function goTop(){
+    const topBtn = $("div.topBtn");
+    topBtn.click(()=>{
+        $( 'html, body' ).animate({ scrollTop: 0 },{ duration : 1500, easing: 'easeOutCirc' })
+    });
+}
+  
 document.addEventListener('mousemove', function(e){
     let card_x = getTransformValue(e.clientX,window.innerWidth,56);
     let card_y = getTransformValue(e.clientY,window.innerHeight,56);
@@ -73,22 +79,29 @@ document.addEventListener('mousemove', function(e){
     $(".floating").css("transform","rotateX("+card_y+"deg) rotateY("+card_x+"deg)  translateZ(60px)");
     $(".floating").css("box-shadow",-card_x+"px "+card_y+"px 55px rgba(255, 255, 255, .3)");
     $(".text").css("text-shadow",-text_shadow_x+"px "+text_shadow_y+"px 6px rgba(0, 0, 0, .3)");
-  });
+});
 function getTransformValue(v1,v2,value){
-return (v1/v2*value-value/2).toFixed(1);                        
+    return (v1/v2*value-value/2).toFixed(1);                        
 }
-
-
-
-navigation();
-contactBtn();
-
+    
 // Scroll Fade In
 const activeEl = document.querySelectorAll(".scrollAni");
 for(let i = 0 ; i < activeEl.length; i++){
   activeEl[i].dataset.index = i;
 }
-window.addEventListener("scroll", ()=>{
+window.addEventListener("scroll", (e)=>{
+
+    var scrollValue = $(document).scrollTop();
+    if(scrollValue > 300){
+        console.log(123);
+        $("div.topBtn").addClass("topBtnActive");
+    }else{
+        $("div.topBtn").removeClass("topBtnActive");
+    }
+
+
+
+
     let boundingRect, activeEl_i;
     for(let i = 0 ; i < activeEl.length; i++){
       activeEl_i = activeEl[i];
@@ -98,3 +111,11 @@ window.addEventListener("scroll", ()=>{
       }
     }
 })
+
+
+function init(){
+    goTop();
+    navigation();
+    contactBtn();
+}
+init();

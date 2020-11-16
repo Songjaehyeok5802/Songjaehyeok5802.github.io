@@ -3,6 +3,9 @@ body{overflow-X: hidden;}
 
 
 section{width: 100%; height: 100%; top: 0;}
+
+
+
 section > div.title{font-size: 300px; font-weight: 700; color: #4c4c4c; margin: 200px 0 0 180px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
 
 

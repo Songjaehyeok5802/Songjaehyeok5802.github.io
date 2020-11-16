@@ -7,7 +7,7 @@
     <title>SJH Portfolio</title>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/common.css">
-    <link rel="stylesheet" href="./style/subway.css">
+    <link rel="stylesheet" href="./style/theeye.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap" rel="stylesheet">
 </head>
 
@@ -28,14 +28,14 @@
                     개발자
                 </p>
 
-                <ul class="tool">
+                <ul class="tool text">
                     <li>Tel </li>
                     <li>Email </li>
                     <li>Web </li>
                 </ul>
 
                 <ul>
-                    <li>010 3932 5802</li>
+                    <li class="text">010 3932 5802</li>
                     <li><a class="text" href="mailto:wakij6587@naver.com">wakij6587@naver.com</a></li>
                     <li><a class="text" href="https://songjaehyeok5802.github.io/main.html">https://songjaehyeok5802.github.io/main.html</a></li>
                 </ul>
@@ -67,6 +67,8 @@
     </header>
 
     <section>
+        <div class="topBtn">Top</div>
+
         <div class="title">The Eye</div>
         
         <article class="project">
@@ -79,10 +81,20 @@
                         <li><span> Tools / </span><br /> Unity / Leap Motion / C#</li>
                         <li><span> Date / </span><br /> 2020</li>
                     </ul>
+                    <p class="awards">
+                        <span>Awards /</span><br />
+                        계원예술대학교 조형제 최우수작
+                    </p>
                     <p class="explain">
-                        코로나로 인하여 전시회를 가지 못하는사람들에게 출,퇴근길에 명화를 보여주며 잠시나마 힐링의 공간을 주고자 만든 프로젝트 입니다.<br />
-                        지하철이 다른 대중교통들에 비해 유동인구가 가장 많고 광범위하게 돌아다닌다는 장점을 생각하여 전시장소로 선정하였습니다.<br />
-                        어렵게 느껴졌던 명화를 생활 속에 녹여 대중들의 문화수준을 높이고 쉽게 다가갈 수 있도록 만들었습니다.<br />
+                        2020년 계원예술대학교 디지털미디어디자인 졸업작품입니다.<br />
+                        코로나로 인하여 힘들었던 한해 사람들에게 위로와 긍정의 메시지를 전하고자 뉴미디어 타로 체험 전시를 기획하였습니다.<br />
+                        언택트시대에 맞춰 비대면으로 진행되는 전시입니다. 손가락을 인식하는 기기인 립모션과 유니티3D를 활용하여 개발하였습니다.<br />
+                        사용자손의 상태와 움직임을 가져와 타로카드를 조작 가능하게 만들었으며 22가지의 결과 씬을 각각 제작하였습니다.<br /><br />
+
+                        이 프로젝트는 5명이서 합을 맞췄습니다. <br />
+                        개발파트를 맡은 저는 유니티와 C#을 전체적으로 관리, 개발하였으며 동시에 립모션을 도맡아 유니티에 적용시켰습니다.<br />
+                        개발을 끝낸 후 스튜디오를 빌려 암막으로 빛을 차단하였고, 빔프로젝터를 활용하여 스크린과 테이블에 화면을 투사하였습니다.<br />
+                        외부에 있는 대기자들에게는 RFID를 활용하여 간접적으로 체험할 수 있도록 만들었습니다.
                     </p>
                 </div> 
              </div>
@@ -97,6 +109,7 @@
     </footer>
 
     <script src="./vendor/jquery.min.js"></script>
+    <script src="./vendor/jquery.easing.min.js"></script>
     <script src="./script/common.js"></script>
     <script src="./script/subway.js"></script>
 </body>

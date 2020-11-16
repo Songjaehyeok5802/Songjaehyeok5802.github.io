@@ -12,9 +12,6 @@ window.addEventListener("scroll", () => {
   
   
   
-  
-  
-  
   let storyPosY = Math.max(0, currentScroll - story3D.offset().top);
   story_wrap.css({"transform" : "translateX(" + -1 * storyPosY +"px)"});
   console.log(storyPosY);
@@ -34,6 +31,8 @@ const story3D = $("div.story3D");
 const story_wrap = $("div.story_wrap");
 
 story3D.css({"width" : 8000, "height" : 7200});
+
+
 
 
 

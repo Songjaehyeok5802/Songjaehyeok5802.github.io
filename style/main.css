@@ -1,4 +1,7 @@
 
+
+
+
 /*  article greet  */
 article.greet{height: 1080px;  }
 article.greet > p{
@@ -50,7 +53,6 @@ article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-fa
 article > div > a > img{width: 1000px; position: absolute; right: 0;}
 
 /* article */
-
 article.dream{}
 article.dream > div.title{}
 article.dream > div > div.title{right: 0; text-align: right;}

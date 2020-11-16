@@ -48,7 +48,7 @@ div.contact_popup > div.contact_wrap > div.contact_txt{
 div.contact_popup > div.contact_wrap > div.contact_txt > p{ line-height: 25px; margin-bottom: 60px; transform: translateZ(80px);}
 div.contact_popup > div.contact_wrap > div.contact_txt > p > span{ line-height: 50px; font-size: 25px;transform: translateZ(30px);}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul{transform: translateZ(80px); float: left;}
-div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{margin-right: 30px;}
+div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{margin-right: 30px;transform: translateZ(60px);}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px;}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000; text-decoration: none;}
 
@@ -57,6 +57,14 @@ div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000
     transform-origin: 50% 50%;
 }
 
+/* Top Btn */
+div.topBtn{
+    position: fixed; width: 65px; height: 65px; border: 1px solid #000; display: flex;
+    justify-content: center; align-items: center; bottom: 50px; right: 80px; z-index: 99;
+    border-radius: 50%; font-size: 16px; opacity: 0; pointer-events: none; transition: 800ms;
+}
+div.topBtnActive{ opacity: 1; pointer-events: all; cursor: pointer;}
+div.topBtn:hover{background-color: #000; color: #fff;}
 
 
   /* Scroll */
