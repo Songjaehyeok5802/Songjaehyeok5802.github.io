@@ -93,7 +93,6 @@ window.addEventListener("scroll", (e)=>{
 
     var scrollValue = $(document).scrollTop();
     if(scrollValue > 300){
-        console.log(123);
         $("div.topBtn").addClass("topBtnActive");
     }else{
         $("div.topBtn").removeClass("topBtnActive");

@@ -152,6 +152,43 @@ function scrollOpacity(){
     });
 }
 
+function clickProject(){
+    const project = $("a.projectLink"),
+          project_lab = $("a.projectLink_Lab"),
+          changeBg = $("div.changeWeb_main"),
+          changeBg_2 = $("div.changeWeb_main_2"),
+          changeLab = $("div.changeLab_main"),
+          changeLab_2 = $("div.changeLab_main_2");
+
+
+    project.click((e)=>{
+        e.preventDefault();
+        const el = e.currentTarget;
+        changeBg.css({"height" : 100 + "%"});
+        changeBg_2.css({"height" : 100 + "%"});
+        setInterval(
+            ()=>{
+                location.href = el.getAttribute("href");
+            }, 1300
+        )
+    })
+
+    project_lab.click((e)=>{
+        e.preventDefault();
+        const el = e.currentTarget;
+        changeLab.css({"height" : 100 + "%"});
+        changeLab_2.css({"height" : 100 + "%"});
+        setInterval(
+            ()=>{
+                location.href = el.getAttribute("href");
+            }, 1300
+        )
+    })
+
+
+
+}
+
 function Init(){
     // Three Js
     bg_3D();
@@ -159,6 +196,8 @@ function Init(){
 
     // Vanila Js
     scrollOpacity();
+    clickProject();
+
     const greet = document.querySelector(".greet");
     greet.style.height=window.innerHeight + "px";
 }

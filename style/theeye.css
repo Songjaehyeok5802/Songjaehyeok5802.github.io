@@ -4,7 +4,6 @@
 section{width: 100%; height: 100%; top: 0;}
 section > div.title{font-size: 300px; font-weight: 700; color: #4c4c4c; margin: 200px 0 0 180px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
 
-
 section > article{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
 section > article > img.mainImg{width: 1400px; padding-top: 500px;}
 section > article > div.sticky_wrap{ margin-top: 50px;}

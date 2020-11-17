@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
  
+
+header, article{opacity: 0; animation: opaAni 1200ms linear forwards;}
+@keyframes opaAni{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
 /* -- Header -- */
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
 header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #fff ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
@@ -59,11 +67,7 @@ div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000
 .scrollAni{opacity: 0; transition: 1200ms;}
 body{overflow-x: hidden; }
 
-div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-delay: 500ms;}
-@keyframes changeBg{
-    0%{background-color: #fff;}
-    100%{background-color: #000;}
-}
+div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-delay: 500ms; background-color: #000;}
 
 
 
@@ -95,8 +99,8 @@ article.greet > div > p.scrollTxt{
 }
 
 span.blank{width: 16px;height: 16px; display: inline-block; float: left;}
-span.up{ display: inline-block; float: left; animation: goUp 1.5s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 1.5s;}
-span.down{ display: inline-block;float: left; animation: goDown 1.5s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 1.5s;}
+span.up{ display: inline-block; float: left; animation: goUp 1s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 300ms;}
+span.down{ display: inline-block;float: left; animation: goDown 1s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 300ms;}
 @keyframes goUp{
     0%{transform: translateY(-15px);}
     100%{transform: translateY(0px); opacity: 1;}
