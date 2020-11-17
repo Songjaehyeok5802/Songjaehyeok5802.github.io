@@ -59,13 +59,13 @@ function bg_3D() {
         requestAnimationFrame(renderScene);
 
         if(camera.position.x > 0){
-            camera.position.x -=0.02;
+            camera.position.x -=0.01;
         }
         if(camera.position.y < 0.5){
-            camera.position.y +=0.02;
+            camera.position.y +=0.01;
         }
         if(camera.position.z < 3){
-            camera.position.z +=0.02;
+            camera.position.z +=0.01;
         }
         camera.lookAt(0, 0, 0);
 

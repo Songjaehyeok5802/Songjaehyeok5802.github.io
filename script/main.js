@@ -24,8 +24,8 @@ function bg_3D() {
 
     //LIGHT-------------
     const SpotlightDown = new THREE.PointLight( 0xffffff, 1); 
-    const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 1); 
-    const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 1); 
+    const SpotlightLeft = new THREE.PointLight( 0xe1fcff, 3); 
+    const SpotlightRight = new THREE.PointLight( 0xf6ffe1, 3); 
     const SpotlightUp = new THREE.PointLight( 0xffffff, 1);  
     const SpotlightFront = new THREE.PointLight( 0xffffff, 1.2);  
     scene.add( SpotlightDown );
@@ -40,7 +40,8 @@ function bg_3D() {
     SpotlightFront.position.set(10, 0, 0);
 
 
-    const geoSphere = new THREE.SphereGeometry( 1.5, 10, 10);
+    let angle = 30;
+    const geoSphere = new THREE.SphereGeometry( 1.5, angle, angle);
     const matColor = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
     const colorMesh = new THREE.Mesh(geoSphere, matColor);
     colorMesh.position.set(0, 0, 0);
@@ -73,12 +74,16 @@ function bg_3D() {
         }else if(count == 1){
             scene.remove(interMesh);
             scene.add(dreamMesh);
+            SpotlightLeft.intensity = 1;
+            SpotlightRight.intensity = 1;
         }else if(count == 2){
             scene.remove(dreamMesh);
             scene.add(subwayMesh);
         }else if(count == 3){
             scene.remove(subwayMesh);
             scene.add(colorMesh);
+            SpotlightLeft.intensity = 3;
+            SpotlightRight.intensity = 3;
             scene.remove( SpotlightFront );
             count = -1;
         }
@@ -93,6 +98,8 @@ function bg_3D() {
         }else if(count == 1){
             scene.remove(interMesh);
             scene.add(colorMesh);
+            SpotlightLeft.intensity = 3;
+            SpotlightRight.intensity = 3;
             scene.remove( SpotlightFront );
         }else if(count == 2){
             scene.remove(dreamMesh);
@@ -100,6 +107,8 @@ function bg_3D() {
         }else if(count == 3){
             scene.remove(subwayMesh);
             scene.add(dreamMesh);
+            SpotlightLeft.intensity = 1;
+            SpotlightRight.intensity = 1;
         }
         count -- ;
     });

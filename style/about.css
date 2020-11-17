@@ -1,7 +1,7 @@
 
 body{overflow: hidden;}
 
-section > div#bg_3D{filter: blur(2px); position: absolute;}
+section > div#bg_3D{position: absolute;}
 
 article{transition: 800ms;}
 article > div.imgWrap{width: 425px; top: 50%; transform: translateY(-50%); left: 20%; position: fixed;}

@@ -18,7 +18,6 @@ header > nav > div.menu{text-align: right; margin-top: 60px; transition: 800ms; 
 header > nav > div.active{opacity: 1; pointer-events: all;}
 header > nav > div.menu > ul{}
 header > nav > div.menu > ul > li{margin-bottom: 20px; position: relative; height: 20px; width:70px;}
-/* header > nav > div.menu > ul > li > a{color: #000; text-decoration: none; font-weight: 500; font-size: 20px;} */
 header > nav > div.menu > ul > li > a{
     position: absolute; right: 0; 
     color: #fff; text-decoration: none; font-weight: 500; font-size: 20px; transition: 500ms; transform-origin: 50% 0; transform-style: preserve-3d;
@@ -72,13 +71,16 @@ div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-del
 article.greet{pointer-events: none; height: 1080px;}
 article.greet > p{
     position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px;  opacity: 0;
-    line-height: 60px; font-weight: 400; color: #fff; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
+    line-height: 60px; font-weight: 400; color: #fff; letter-spacing: 1px; word-spacing: -0.25; 
     animation: startGreet 2s forwards linear; font-family: 'Nanum Myeongjo'; user-select: none; animation-delay: 1s;
+    /* text-align: center; */
+    display: flex; flex-direction: column; align-items: center;
 }
 @keyframes startGreet{
     0%{opacity: 0; margin-top: 15px;}
     100%{opacity: 1; margin-top: 0px;}
 }
+
 article.greet > div.scrollArea{position: absolute; left: 50%; transform: translateX(-50%);bottom: 20px; width: 100px; height: 100px;}
 article.greet > div > span.scrollDot{
     display: block; position: absolute; width: 10px; height: 10px; background-color: #fff; left: 50%; transform: translateX(-50%);
@@ -87,13 +89,22 @@ article.greet > div > span.scrollDot{
 article.greet > div > p.scrollTxt{
     position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%; font-family: 'Noto Sans KR'; font-weight: 500; color: #fff;
 }
-
 @keyframes scrollAni{
     0%{bottom: 100px; opacity: 0;width: 5px; height: 5px;}
     100%{bottom: 50px; opacity: 1;width: 10px; height: 10px;}
 }
 
-
+span.blank{width: 16px;height: 16px; display: inline-block; float: left;}
+span.up{ display: inline-block; float: left; animation: goUp 1.5s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 1.5s;}
+span.down{ display: inline-block;float: left; animation: goDown 1.5s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 1.5s;}
+@keyframes goUp{
+    0%{transform: translateY(-15px);}
+    100%{transform: translateY(0px); opacity: 1;}
+}
+@keyframes goDown{
+    0%{transform: translateY(40px);}
+    100%{transform: translateY(0px); opacity: 1;}
+}
 
 
 /*  article project common  */
