@@ -11,6 +11,19 @@ header, article{opacity: 0; animation: opaAni 1200ms linear forwards;}
     100%{opacity: 1;}
 }
 
+div.changeWeb_main{
+    position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 800ms;
+}
+div.changeWeb_main_2{
+    position: fixed; width: 100%; height: 0; background-color: #fff; z-index: 9999; top: 0; left: 0; transition: 1200ms;
+}
+div.changeLab_main{
+    position: fixed; width: 100%; height: 0; background-color: #fff; z-index: 9999; top: 0; left: 0; transition: 800ms;
+}
+div.changeLab_main_2{
+    position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 1200ms;
+}
+
 
 /* -- Header -- */
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
@@ -74,15 +87,11 @@ div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-del
 /*  article greet  */
 article.greet{pointer-events: none; height: 1080px;}
 article.greet > p{
-    position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px;  opacity: 0;
+    position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px;  opacity: 1;
     line-height: 60px; font-weight: 400; color: #fff; letter-spacing: 1px; word-spacing: -0.25; 
-    animation: startGreet 2s forwards linear; font-family: 'Nanum Myeongjo'; user-select: none; animation-delay: 1s;
+    font-family: 'Nanum Myeongjo'; user-select: none; animation-delay: 1s;
     /* text-align: center; */
     display: flex; flex-direction: column; align-items: center;
-}
-@keyframes startGreet{
-    0%{opacity: 0; margin-top: 15px;}
-    100%{opacity: 1; margin-top: 0px;}
 }
 
 article.greet > div.scrollArea{position: absolute; left: 50%; transform: translateX(-50%);bottom: 20px; width: 100px; height: 100px;}
@@ -99,8 +108,8 @@ article.greet > div > p.scrollTxt{
 }
 
 span.blank{width: 16px;height: 16px; display: inline-block; float: left;}
-span.up{ display: inline-block; float: left; animation: goUp 1s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 300ms;}
-span.down{ display: inline-block;float: left; animation: goDown 1s forwards ease-in-out; opacity: 0; transition: 800ms;animation-delay: 300ms;}
+span.up{ display: inline-block; float: left; animation: goUp 2000ms forwards ease-in-out; opacity: 0; transition: 800ms;}
+span.down{ display: inline-block;float: left; animation: goDown 2000ms forwards ease-in-out; opacity: 0; transition: 800ms;}
 @keyframes goUp{
     0%{transform: translateY(-15px);}
     100%{transform: translateY(0px); opacity: 1;}

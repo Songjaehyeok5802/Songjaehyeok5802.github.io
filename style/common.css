@@ -11,19 +11,19 @@ body.fadeInPage{opacity: 0; animation: opaAni 1200ms linear forwards;}
 }
 
 
-div.changeWeb{
-    position: fixed; width: 100%; height: 100%; background-color: #000; z-index: 9999; top: 0; left: 0;
-    animation: openWeb 1200ms ease-out forwards;
-}
-div.changeWeb_2{
-    position: fixed; width: 100%; height: 100%; background-color: #fff; z-index: 9999; top: 0; left: 0;
-    animation: openWeb 800ms ease-out forwards;
-}
-@keyframes openWeb{
-    0%{height: 100%;}
-    100%{height: 0%;}
-}
 
+div.changeWeb_main{
+    position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 800ms;
+}
+div.changeWeb_main_2{
+    position: fixed; width: 100%; height: 0; background-color: #fff; z-index: 9999; top: 0; left: 0; transition: 1200ms;
+}
+div.changeLab_main{
+    position: fixed; width: 100%; height: 0; background-color: #fff; z-index: 9999; top: 0; left: 0; transition: 800ms;
+}
+div.changeLab_main_2{
+    position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 1200ms;
+}
 
 
 

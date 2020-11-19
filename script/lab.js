@@ -73,19 +73,39 @@ function bg_3D() {
     }   
 }
 
-// 배경 스크롤 블러처리
-function scrollOpacity(){
-    const bg = document.querySelector("#bg_3D");
-    const checkpoint = window.innerHeight;
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.scrollY;
-    
-      if (currentScroll < checkpoint) {
-        bg.style.opacity = 1.3 - currentScroll / checkpoint;
-      } else {
-        bg.style.opacity = 0.1;
-      }
-    });
+
+function clickProject(){
+  const project = $("a.projectLink"),
+        project_lab = $("a.projectLink_Lab"),
+        changeBg = $("div.changeWeb_main"),
+        changeBg_2 = $("div.changeWeb_main_2"),
+        changeLab = $("div.changeLab_main"),
+        changeLab_2 = $("div.changeLab_main_2");
+
+
+  project.click((e)=>{
+      e.preventDefault();
+      const el = e.currentTarget;
+      changeBg.css({"height" : 100 + "%"});
+      changeBg_2.css({"height" : 100 + "%"});
+      setInterval(
+          ()=>{
+              location.href = el.getAttribute("href");
+          }, 1300
+      )
+  })
+
+  project_lab.click((e)=>{
+      e.preventDefault();
+      const el = e.currentTarget;
+      changeLab.css({"height" : 100 + "%"});
+      changeLab_2.css({"height" : 100 + "%"});
+      setInterval(
+          ()=>{
+              location.href = el.getAttribute("href");
+          }, 1300
+      )
+  })
 }
 
 
@@ -93,7 +113,7 @@ function Init(){
     // Three Js
     bg_3D();
     // Vanila Js
-    // scrollOpacity();
+    clickProject();
 }
 Init();
 
