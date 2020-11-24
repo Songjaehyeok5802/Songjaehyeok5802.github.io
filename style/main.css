@@ -58,7 +58,7 @@ article > div > a > img{width: 1000px; position: absolute; right: 0; transition:
 /* article */
 article.theeye{}
 article.theeye > div.title{}
-article.theeye > div > div.title{right: 0;}
+article.theeye > div > div.title{right: 0; text-align: right;}
 article.theeye > div > a >img{left: 0;}
 
 

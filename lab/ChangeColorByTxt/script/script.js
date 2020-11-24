@@ -15,6 +15,7 @@ function three(){
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     document.getElementById("obj").appendChild(renderer.domElement);
+    control = new THREE.OrbitControls(camera, renderer.domElement);
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     window.addEventListener("resize", function(){
@@ -42,7 +43,6 @@ function three(){
     scene.add(cube);
 
     let matColor;
-    console.log(Math.random() * 100);
     const renderScene = new function renderScene() {
         requestAnimationFrame(renderScene);
         camera.lookAt(0, 0, 0);  
@@ -60,6 +60,8 @@ function three(){
     
 }
 three();
+
+
 
 
 
