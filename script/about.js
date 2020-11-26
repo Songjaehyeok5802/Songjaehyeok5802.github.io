@@ -8,7 +8,6 @@ new hoverEffect({
     displacementImage:"./img/profile_Img/effect.png"
 });
 
-// 배경 3D
 
 
 function bg_3D() {
@@ -73,4 +72,4 @@ function bg_3D() {
         renderer.render(scene,camera);
     }   
 }
-bg_3D();
+// bg_3D();
