@@ -59,6 +59,19 @@ function bg_3D() {
     scene.add(colorMesh5);
 
     var t = 0;
+
+    let composer;
+    composer = new POSTPROCESSING.EffectComposer(renderer);
+    composer.addPass(new POSTPROCESSING.RenderPass(scene,camera));
+
+    const effectPass = new POSTPROCESSING.EffectPass(
+      camera,
+      new POSTPROCESSING.BloomEffect()
+    );
+    effectPass.renderToScreen = true;
+    composer.addPass(effectPass);
+
+
     //RENDER-------------------------------------------------------------------------------
     const renderScene = new function renderScene() {
         requestAnimationFrame(renderScene);
@@ -69,7 +82,8 @@ function bg_3D() {
         camera.position.x = 20*Math.cos(t) + 0;
         camera.position.z = 20*Math.sin(t) + 0;
         camera.lookAt(0, 0, 0);
-        renderer.render(scene,camera);
+        composer.render();
+        // renderer.render(scene,camera);
     }   
 }
 
