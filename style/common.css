@@ -4,14 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-body{background-color: #e5e3dd;}
+/* body{background-color: #e5e3dd;} */
+
+
 body.fadeInPage{opacity: 0; animation: opaAni 1200ms linear forwards;}
 @keyframes opaAni{
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
-body.lab{background-color: #fff;}
-
+body.theeye{background-color: #e5e3dd;}
+body.subway{background-color: #e5e3dd;}
+body.interstellar{background-color: #e5e3dd;}
+body.dream{background-color: #e5e3dd;}
 
 
 div.changeWeb_main{
@@ -31,14 +35,18 @@ div.changeLab_main_2{
 
 /* -- Header -- */
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
-header > a.logo{ font-size: 30px; padding:0 60px 60px; display: inline-block; color: #454545 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
+header > a.logo{
+    font-size: 30px; margin-left: 60px; display: inline-block; color: #454545 ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";
+    /* color: #d4c9ab; text-shadow: inset 1px 1px #c1ac71; */
+}
 header > a.logo > span{ position: absolute;}
 header > a.logo > span:nth-child(1){left: 60px;transition: 400ms;}
 header > a.logo > span:nth-child(2){left: 80px;transition: 600ms;}
 header > a.logo > span:nth-child(3){left: 100px;transition: 800ms;}
 header > a.logo > span:nth-child(4){left: 125px;transition: 1000ms;}
-header > a.logo:hover span{text-shadow: 4px 4px 4px #4545458b;}
+header > a.logo:hover span{text-shadow: 4px 4px 4px #4545458b; color: #454545; box-shadow:  0px 0px #c1ac71;}
 header > nav.nav{float: right; margin-right: 80px; ;}
+
 header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right; cursor: pointer;}
 header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: #454545; display:block; transition: 500ms;}
 header > nav.nav > div.nav_bar > span.nav_bar_1{}
@@ -48,7 +56,7 @@ header > nav.nav > div.nav_bar > span.nav_bar_3{width: 50%; float: right;}
 header > nav > div.menu{text-align: right; margin-top: 60px; transition: 800ms; opacity: 0; pointer-events: none;}
 header > nav > div.active{opacity: 1; pointer-events: all;}
 header > nav > div.menu > ul{}
-header > nav > div.menu > ul > li{margin-bottom: 20px; position: relative; height: 20px; width:70px;}
+header > nav > div.menu > ul > li{padding: 10px; position: relative; height: 20px; width:70px;}
 header > nav > div.menu > ul > li > a{
     position: absolute; right: 0; 
     color: #454545; text-decoration: none; font-weight: 500; font-size: 20px; transition: 500ms; transform-origin: 50% 0; transform-style: preserve-3d;
@@ -57,7 +65,7 @@ header > nav > div.menu > ul > li > a::after{
     position: absolute; content: attr(data-txt); color: #454545; border-radius: 5px;transform: rotateX(-90deg);width: 100%; height: 100%; padding: 5px;
     transform-origin: 50% 0; top: 100%; right: 0; display: flex; justify-content: center; align-items: center; background-color: #fdfff5;
 }
-header > nav > div.menu > ul > li > a:hover{transform: rotateX(90deg)}
+header > nav > div.menu > ul > li:hover > a{transform: rotateX(90deg)}
 
 
 
@@ -87,6 +95,8 @@ div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000
     transform-origin: 50% 50%;
 }
 
+
+
 /* Top Btn */
 div.topBtn{
     position: fixed; width: 65px; height: 65px; border: 1px solid #454545; display: flex;
@@ -96,6 +106,12 @@ div.topBtn{
 div.topBtnActive{ opacity: 1; pointer-events: all; cursor: pointer;}
 div.topBtn:hover{background-color: #454545; color: #fdfff5;}
 
+
+section.portfolio{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
+section.portfolio > div.title{margin-left: -24px; font-size: 300px; font-weight: 700; color: #4c4c4c; margin-top: 200px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
+
+section.portfolio > div.subway_title{margin-left: -13px;}
+section.portfolio > div.theeye_title{margin-left: -8px;}
 
   /* Scroll */
 .scrollAni{opacity: 0; transition: 1200ms;}

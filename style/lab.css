@@ -28,6 +28,12 @@ div.changeLab_main_2{
 /* -- Header -- */
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }
 header > a.logo{ font-size: 30px; margin-left: 60px; display: inline-block; color: #fff ; text-decoration: none; overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond";}
+header > a.logo > span{ position: absolute;}
+header > a.logo > span:nth-child(1){left: 60px;transition: 400ms;}
+header > a.logo > span:nth-child(2){left: 80px;transition: 600ms;}
+header > a.logo > span:nth-child(3){left: 100px;transition: 800ms;}
+header > a.logo > span:nth-child(4){left: 125px;transition: 1000ms;}
+header > a.logo:hover span{text-shadow: 4px 4px 4px #ffffffc0;}
 header > nav.nav{float: right; margin-right: 80px; ;}
 header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right; cursor: pointer;}
 header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: #fff; display:block; transition: 500ms;}
