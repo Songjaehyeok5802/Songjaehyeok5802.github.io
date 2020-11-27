@@ -133,9 +133,6 @@ window.addEventListener("scroll", (e)=>{
         $("div.topBtn").removeClass("topBtnActive");
     }
 
-
-
-
     let boundingRect, activeEl_i;
     for(let i = 0 ; i < activeEl.length; i++){
       activeEl_i = activeEl[i];
