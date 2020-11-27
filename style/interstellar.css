@@ -5,7 +5,7 @@ body{overflow-X: hidden;}
 
 
 
-section{width: 100%; height: 100%; top: 0;}
+section{width: 100%; height: 100%; top: 0; position: relative;}
 
 section > div.title{font-size: 300px; font-weight: 700; color: #4c4c4c; margin: 200px 0 0 180px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
 
@@ -33,11 +33,12 @@ section > article > div > p.explain3D{text-align: left; font-weight: 400; font-s
 section > article > div > div.main3D{margin-top: 100px;}
 section > article > div > div.main3D > img{width: 1400px;}
 
-section > article > div > div.story3D{float: left; margin:0px 0 300px; position: relative;}
+section > article > div > div.story3D{position: relative;}
 section > article > div > div.story3D > div.story_wrap {position: absolute; display: flex; top: 150px;} 
 section > article > div > div.story3D > div.story_wrap > img{
      width: 1400px; float: left; margin-right: 200px; transform: translateX();
 }
 
-footer{margin: 300px 0 350px; text-align: center;}
+
+footer{margin: 300px 0 350px; text-align: center; position: relative; height: 200px;}
 footer > a{color: #000; text-decoration: none; font-size: 200px;padding: 50px; font-weight: 100;}

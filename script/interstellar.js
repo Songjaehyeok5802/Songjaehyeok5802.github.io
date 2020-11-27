@@ -14,7 +14,6 @@ window.addEventListener("scroll", () => {
   
   let storyPosY = Math.max(0, currentScroll - story3D.offset().top);
   story_wrap.css({"transform" : "translateX(" + -1 * storyPosY +"px)"});
-  console.log(storyPosY);
   if(currentScroll >= story3D.offset().top  && currentScroll < story3D.offset().top + story3D.innerHeight()){
     if(storyPosY < 6400){
       story_wrap.css({"position" : "fixed", "top" : 150 + "px" , "height" : 768, "transform" : "translateX(" + -1 * storyPosY +"px)"});
