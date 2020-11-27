@@ -3,7 +3,7 @@
 
 
 div.intro_wrap{
-    width: 100%; height: 100%;position: fixed;background-color: #e5e3dd; z-index: 99999;pointer-events: none;
+    width: 100%; height: 100%;position: fixed;background-color: #e5e3dd; z-index: 99999;pointer-events: none; color: #454545;
     display: flex; justify-content: center; align-items: center; font-size: 30px; animation: intro 1s forwards linear; animation-delay: 3s;
 }
 @keyframes intro{
@@ -43,12 +43,12 @@ article.greet > div > span.scrollDot{
     border-radius: 50%; animation: scrollAni 1.5s ease-in-out infinite;
 }
 article.greet > div > p.scrollTxt{
-    position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%; font-family: 'Noto Sans KR'; font-weight: 500;
+    position: absolute; bottom: 0; text-align: center; height: 20px; font-size: 16px; width: 100%; font-family: 'Noto Sans KR'; font-weight: 500; color: #454545;
 }
 
 
 article.greet > div.btnArrow{width: 25px; height: 50px; position: fixed; top: 50%; transform: translateY(-50%); z-index: 5; cursor: pointer;}
-article.greet > div.btnArrow > span{width: 25px; height: 2px; background-color: #000; position: relative; display: block; top: 50%; transform: translateY(-50%);}
+article.greet > div.btnArrow > span{width: 25px; height: 2px; background-color: #454545; position: relative; display: block; top: 50%; transform: translateY(-50%);}
 article.greet > div.btnRight{right: 0;  margin-right: 60px;}
 article.greet > div.btnRight > span:first-child{transform: rotate(45deg); top: 19.5%; }
 article.greet > div.btnRight > span:last-child{transform: rotate(-45deg);}

@@ -12,17 +12,3 @@ window.addEventListener("scroll", () => {
 });
 
 
-const nextBtn = $("a.nextBtn");
-let mouseX = 0, mouseY = 0;
-
-nextBtn.mousemove( (e)=>{
-  mouseX = e.pageX;
-  mouseY = e.pageY;
-  $("div.cursor").css({"top" : mouseY, "left" : mouseX});
-  $("div.cursor").addClass("activeBgImg");
-});
-nextBtn.mouseleave(()=>{
-  $("div.cursor").removeClass("activeBgImg");
-});
-  
-

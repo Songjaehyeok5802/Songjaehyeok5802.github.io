@@ -1,13 +1,6 @@
 
 
-div.cursor{position: absolute; opacity: 0; width: 0px; height: 0px;transform: translate(-50%, -50%); z-index: -1; border-radius: 50%;}
-div.activeBgImg{
-    animation: nextBg 500ms forwards linear; 
-}
-@keyframes nextBg{
-    0%{}
-    100%{width: 500px; height: 500px; background: url("../img/project/interstellar/2D/Main.png"); background-position: center; background-size: cover; opacity: 1;}
-}
+
 
 
 section{width: 100%; height: 100%; top: 0;}
