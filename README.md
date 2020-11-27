@@ -22,6 +22,5 @@ X,Y 2개의 축을 너머 Z축까지 사용하였습니다.
 -할것
 
 *Next 버튼
-*scroll 문제
-*lab 페이지 이미지효과
 *Secret 페이지 추가
+*scroll 문제
