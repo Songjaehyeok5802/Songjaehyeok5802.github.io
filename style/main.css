@@ -47,15 +47,6 @@ article.greet > div > p.scrollTxt{
 }
 
 
-article.greet > div.btnArrow{width: 25px; height: 50px; position: fixed; top: 50%; transform: translateY(-50%); z-index: 5; cursor: pointer;}
-article.greet > div.btnArrow > span{width: 25px; height: 2px; background-color: #454545; position: relative; display: block; top: 50%; transform: translateY(-50%);}
-article.greet > div.btnRight{right: 0;  margin-right: 60px;}
-article.greet > div.btnRight > span:first-child{transform: rotate(45deg); top: 19.5%; }
-article.greet > div.btnRight > span:last-child{transform: rotate(-45deg);}
-article.greet > div.btnLeft{left: 0; margin-left: 60px;}
-article.greet > div.btnLeft > span:first-child{transform: rotate(-45deg); top: 19.5%;}
-article.greet > div.btnLeft > span:last-child{transform: rotate(45deg);}
-
 article.greet > div#bg_3D{position: fixed; z-index: -3;}
 @keyframes scrollAni{
     0%{bottom: 100px; opacity: 0;width: 5px; height: 5px;}
