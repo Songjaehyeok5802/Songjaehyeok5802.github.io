@@ -4,8 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
-/* body{background-color: #e5e3dd;} */
-
 
 body.fadeInPage{opacity: 0; animation: opaAni 1200ms linear forwards;}
 @keyframes opaAni{
@@ -31,6 +29,14 @@ div.changeLab_main_2{
     position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 1200ms;
 }
 
+/* ScrollBar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #454545;
+}
+
 
 
 /* -- Header -- */
@@ -46,13 +52,11 @@ header > a.logo > span:nth-child(3){left: 100px;transition: 800ms;}
 header > a.logo > span:nth-child(4){left: 125px;transition: 1000ms;}
 header > a.logo:hover span{text-shadow: 4px 4px 4px #4545458b; color: #454545; box-shadow:  0px 0px #c1ac71;}
 header > nav.nav{float: right; margin-right: 80px; ;}
-
 header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right; cursor: pointer;}
 header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: #454545; display:block; transition: 500ms;}
 header > nav.nav > div.nav_bar > span.nav_bar_1{}
 header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
 header > nav.nav > div.nav_bar > span.nav_bar_3{width: 50%; float: right;}
-
 header > nav > div.menu{text-align: right; margin-top: 60px; transition: 800ms; opacity: 0; pointer-events: none;}
 header > nav > div.active{opacity: 1; pointer-events: all;}
 header > nav > div.menu > ul{}
@@ -72,17 +76,13 @@ header > nav > div.menu > ul > li:hover > a{transform: rotateX(90deg)}
 
 /* -- Contact Popup --  */
 div.contact_popup{opacity: 0; pointer-events: none; transition: 500ms; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; position: fixed; z-index: 5;}
-div.contact_popup > div.contact_bg{position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.95; z-index: 6;
-}
+div.contact_popup > div.contact_bg{position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.95; z-index: 6;}
 div.contact_popup > div.contact_wrap{
     width: 500px; height: 300px; background-color: #fff; border-radius: 15px;
-    z-index: 7; position: fixed; 
-    box-shadow:0 0 40px #929292,0 0 40px #929292 ;
+    z-index: 7; position: fixed; box-shadow:0 0 40px #929292,0 0 40px #929292 ;
 }
 div.contact_popup > div.contact_wrap > div.logo{float: right; margin: 50px 50px 0 0; transform: translateZ(60px); font-size: 30px; font-family: "Cormorant Garamond";}
-div.contact_popup > div.contact_wrap > div.contact_txt{
-    display: inline-block; position: absolute; bottom: 50px; left: 50px; font-size: 16px;
-}
+div.contact_popup > div.contact_wrap > div.contact_txt{display: inline-block; position: absolute; bottom: 50px; left: 50px; font-size: 16px;}
 div.contact_popup > div.contact_wrap > div.contact_txt > p{ line-height: 25px; margin-bottom: 60px; transform: translateZ(80px);}
 div.contact_popup > div.contact_wrap > div.contact_txt > p > span{ line-height: 50px; font-size: 25px;transform: translateZ(30px);}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul{transform: translateZ(80px); float: left;}
@@ -90,10 +90,7 @@ div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{margin-right: 3
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px;}
 div.contact_popup > div.contact_wrap > div.contact_txt > ul > li > a{color: #000; text-decoration: none;}
 
-.floating{    
-    transform-style: preserve-3d;
-    transform-origin: 50% 50%;
-}
+.floating{transform-style: preserve-3d;transform-origin: 50% 50%;}
 
 
 
@@ -109,7 +106,6 @@ div.topBtn:hover{background-color: #454545; color: #fdfff5;}
 
 section.portfolio{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
 section.portfolio > div.title{margin-left: -24px; font-size: 300px; font-weight: 700; color: #4c4c4c; margin-top: 200px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
-
 section.portfolio > div.subway_title{margin-left: -13px;}
 section.portfolio > div.theeye_title{margin-left: -8px;}
 
