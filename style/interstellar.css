@@ -38,6 +38,3 @@ section > article > div > div.story3D > div.story_wrap > img{
      width: 1400px; float: left; margin-right: 200px; transform: translateX();
 }
 
-
-footer{margin: 300px 0 350px; text-align: center; position: relative; height: 200px;}
-footer > a{color: #000; text-decoration: none; font-size: 200px;padding: 50px; font-weight: 100;}

@@ -132,6 +132,18 @@ for(let i = 0 ; i < activeEl.length; i++){
   activeEl[i].dataset.index = i;
 }
 
+function footer(){
+    const footer_link = $("a.footerLink"),
+          footer_img = $("img.footer_img");
+
+    footer_link.mouseenter(()=>{
+        footer_img.addClass("hover");
+        footer_img.removeClass("leave");
+    }).mouseleave(()=>{
+        footer_img.removeClass("hover");
+        footer_img.addClass("leave");
+    })
+}
 
 window.addEventListener("scroll", (e)=>{
     
@@ -159,5 +171,6 @@ function init(){
     navigation();
     contactBtn();
     clickProject();
+    footer();
 }
 init();

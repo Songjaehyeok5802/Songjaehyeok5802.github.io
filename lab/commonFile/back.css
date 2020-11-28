@@ -1,22 +1,8 @@
-/* button.closeBtn{
-    position: absolute; width: 70px; height: 70px; border: 1px solid #000; bottom: 0; z-index: 99; outline: none; cursor: pointer;
-    background: transparent; margin: 0 0 60px 60px; display: flex; justify-content: center; align-items: center;
-}
-button.closeBtn > span{
-    position: relative;transition: 250ms; transform-origin: 50% 0; transform-style: preserve-3d; padding: 10px;
-    border: 1px solid black;
-}
-button.closeBtn > span::after{
-    position: absolute; content: "Back"; color: #000;transform: rotateX(-90deg); padding: 10px;
-    transform-origin: 50% 0; transition: 500ms; top: 100%; left: 0;border: 1px solid black;
-}
-button.closeBtn:hover > span{transform: rotateX(90deg)}
-button.closeBtn:hover > span::after{} */
 
 
 button.closeBtn{
     position: absolute; width: 70px; height: 70px; border: 1px solid #000; bottom: 0; z-index: 99; outline: none; cursor: pointer;
-    background: transparent; margin: 0 0 60px 60px; transition: 250ms; transform-origin: 50% 0; transform-style: preserve-3d; border-radius: 5px;
+    background: transparent; margin: 0 0 60px 60px; transition: 500ms; transform-origin: 50% 0; transform-style: preserve-3d; border-radius: 5px;
 }
 button.closeBtn::after{
     position: absolute; content: "BACK"; color: #000; transform: rotateX(-90deg);width: 68px;height: 70px;border-radius: 5px;
