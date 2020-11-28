@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
 const story3D = $("div.story3D");
 const story_wrap = $("div.story_wrap");
 
-story3D.css({"width" : 8000, "height" : 7200});
+story3D.css({"width" : 8000, "height" : 7300});
 
 
 
