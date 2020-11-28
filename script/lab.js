@@ -122,11 +122,30 @@ function clickProject(){
   })
 }
 
+function goTop(){
+    const topBtn = $("div.topBtn");
+    topBtn.click(()=>{
+        $scroll.animate({ scrollTop: 0 },{ duration : 800, easing: 'easeOutCirc' })
+    });
+}
+
+
+window.addEventListener("scroll", (e)=>{
+    var scrollValue = $(document).scrollTop();
+    if(scrollValue > 300){
+        $("div.topBtn").addClass("topBtnActive");
+    }else{
+        $("div.topBtn").removeClass("topBtnActive");
+    }
+
+})
+
 
 function Init(){
     // Three Js
     bg_3D();
     // Vanila Js
+    goTop();
     clickProject();
 }
 Init();

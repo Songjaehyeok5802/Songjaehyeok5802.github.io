@@ -87,6 +87,14 @@ body{overflow-x: hidden; }
 
 div#bg_3D{position: fixed; animation: changeBg 2s forwards linear; animation-delay: 500ms; background-color: #000;}
 
+/* Top Btn */
+div.topBtn{
+    position: fixed; width: 65px; height: 65px; border: 1px solid #fdfff5; display: flex; color: #fdfff5;
+    justify-content: center; align-items: center; bottom: 50px; right: 80px; z-index: 99;
+    border-radius: 50%; font-size: 16px; opacity: 0; pointer-events: none; transition: 800ms;
+}
+div.topBtnActive{ opacity: 1; pointer-events: all; cursor: pointer;}
+div.topBtn:hover{background-color: #fdfff5; color: #454545;}
 
 
 /*  article greet  */
