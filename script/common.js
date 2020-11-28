@@ -68,13 +68,13 @@ const $scroll = $("html, body");
 let isScroll = true;
 
 
-
-// $('body,html').bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function (e) {  if (e.which > 0 || e.type == "mousedown" || e.type == "mousewheel" || e.type == "touchmove") {    $("html,body").stop();  }});
-
 function goTop(){
     const topBtn = $("div.topBtn");
     topBtn.click(()=>{
-        $scroll.animate({ scrollTop: 0 },{ duration : 800, easing: 'easeOutCirc' })
+        $scroll.animate({ scrollTop: 0 },{ duration : 800, easing: 'easeOutCirc' });
+    });
+    $scroll.on('mousewheel', ()=>{
+        $scroll.stop();
     });
 }
 
