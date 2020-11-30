@@ -136,10 +136,10 @@ function footer(){
     const footer_link = $("a.footerLink"),
           footer_img = $("img.footer_img");
 
-    footer_link.mouseenter(()=>{
+    footer_link.mouseover(()=>{
         footer_img.addClass("hover");
         footer_img.removeClass("leave");
-    }).mouseleave(()=>{
+    }).mouseout(()=>{
         footer_img.removeClass("hover");
         footer_img.addClass("leave");
     })

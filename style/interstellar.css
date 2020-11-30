@@ -18,17 +18,17 @@ section > article > div > div > ul > li:first-child{float: left;}
 section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p.web {text-align: left;font-size: 20px; line-height: 35px; font-weight: 400;margin-bottom: 90px;line-height: 35px;}
 section > article > div > div > p.web > span{ font-family: "Cormorant Garamond"; font-weight: 600;}
-section > article > div > div > p.web > a{color: #000; text-decoration: none; transition: 500ms; padding: 4px;border-radius: 5px; border: 1px solid #454545;}
+section > article > div > div > p.web > a{font-family: 'Noto Sans KR'; font-size: 20px; vertical-align: middle; color: #000; text-decoration: none; transition: 500ms; padding: 4px;border-radius: 5px; border: 1px solid #454545;}
 section > article > div > div > p.web > a:hover{background-color: #454545; color: #fff;}
 
-section > article > div > div > p.explain{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
+section > article > div > div > p.explain{font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
 
 section > article > div > div.about{text-align: left;}
 section > article > div > div.about > video{width: 800px;}
 section > article > div > div.story{text-align: right; margin-top: 150px;}
 section > article > div > div.story > video{width: 800px;}
 
-section > article > div > p.explain3D{text-align: left; font-weight: 400; font-size: 23px; line-height: 40px; margin-top: 200px;}
+section > article > div > p.explain3D{font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px; margin-top: 200px;}
 section > article > div > div.main3D{margin-top: 100px;}
 section > article > div > div.main3D > img{width: 1400px;}
 
