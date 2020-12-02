@@ -12,7 +12,6 @@ section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p.awards{font-family: 'Noto Sans KR'; text-align: left;font-size: 20px;font-weight: 300;margin-bottom: 90px;line-height: 35px;}
 section > article > div > div > p.awards > span{ font-family: "Cormorant Garamond"; font-weight: 600;}
 section > article > div > div > p.explain{font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
-section > article > div > div > a{text-align: left; font-weight: 400; font-size: 23px; color: #000; float: left; margin: 40px 0 80px;}
 section > article > div > img.subImg{width: 1400px;}
 
 section > article > div > iframe{margin-bottom: 100px;}
