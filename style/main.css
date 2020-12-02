@@ -67,10 +67,10 @@ article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-fa
 article > div > a > img{width: 1000px; position: absolute; right: 0; transition: 800ms;}
 
 /* article */
-article.theeye{}
-article.theeye > div.title{}
-article.theeye > div > div.title{right: 0; text-align: right;}
-article.theeye > div > a >img{left: 0;}
+article.secret{}
+article.secret > div.title{}
+article.secret > div > div.title{right: 0; text-align: right;}
+article.secret > div > a >img{left: 0;}
 
 
 article.dream{}
