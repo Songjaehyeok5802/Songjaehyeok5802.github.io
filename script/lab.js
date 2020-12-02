@@ -91,37 +91,52 @@ function bg_3D() {
 function clickProject(){
   const project = $("a.projectLink"),
         project_lab = $("a.projectLink_Lab"),
+        project_lab_item = $("a.project_lab_item"),
         changeBg = $("div.changeWeb_main"),
         changeBg_2 = $("div.changeWeb_main_2"),
         changeLab = $("div.changeLab_main"),
-        changeLab_2 = $("div.changeLab_main_2");
+        changeLab_2 = $("div.changeLab_main_2"),
+        changeItem = $("div.changeLab_item"),
+        changeItem_2 = $("div.changeLab_item_2");
 
 
-  project.click((e)=>{
-      e.preventDefault();
-      const el = e.currentTarget;
-      changeBg.css({"height" : 100 + "%"});
-      changeBg_2.css({"height" : 100 + "%"});
-      setInterval(
-          ()=>{
-              location.href = el.getAttribute("href");
-          }, 1300
-      )
-  })
+    project.click((e)=>{
+        e.preventDefault();
+        const el = e.currentTarget;
+        changeBg.css({"height" : 100 + "%"});
+        changeBg_2.css({"height" : 100 + "%"});
+        setInterval(
+            ()=>{
+                location.href = el.getAttribute("href");
+            }, 1300
+        )
+    })
 
-  project_lab.click((e)=>{
-      e.preventDefault();
-      const el = e.currentTarget;
-      changeLab.css({"height" : 100 + "%"});
-      changeLab_2.css({"height" : 100 + "%"});
-      setInterval(
-          ()=>{
-              location.href = el.getAttribute("href");
-          }, 1300
-      )
-  })
+    project_lab.click((e)=>{
+        e.preventDefault();
+        const el = e.currentTarget;
+        changeLab.css({"height" : 100 + "%"});
+        changeLab_2.css({"height" : 100 + "%"});
+        setInterval(
+            ()=>{
+                location.href = el.getAttribute("href");
+            }, 1300
+        )
+    })
+
+    project_lab_item.click((e)=>{
+        e.preventDefault();
+        const el = e.currentTarget;
+        changeItem.css({"height" : 100 + "%"});
+        changeItem_2.css({"height" : 100 + "%"});
+        setInterval(
+            ()=>{
+                location.href = el.getAttribute("href");
+            }, 1300
+        )
+    })
+
 }
-
 function goTop(){
     const topBtn = $("div.topBtn");
     topBtn.click(()=>{
@@ -149,5 +164,3 @@ function Init(){
     clickProject();
 }
 Init();
-
-

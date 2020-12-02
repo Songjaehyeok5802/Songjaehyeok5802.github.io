@@ -24,6 +24,21 @@ div.changeLab_main_2{
     position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 1200ms;
 }
 
+div.changeLab_item{
+    position: fixed; width: 100%; height: 0; background-color: #000; z-index: 9999; top: 0; left: 0; transition: 800ms;
+}
+div.changeLab_item_2{
+    position: fixed; width: 100%; height: 0; background-color: #fff; z-index: 9999; top: 0; left: 0; transition: 1200ms;
+}
+
+/* ScrollBar */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #e5e3dd;
+}
+
 
 /* -- Header -- */
 header{position: fixed; z-index: 9999; top: 50px; width: 100%; }

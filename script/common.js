@@ -79,8 +79,8 @@ function goTop(){
 }
 
 function clickProject(){
-    const project = $("a.projectLink"),
-          project_lab = $("a.projectLink_Lab"),
+    const project = $(".projectLink"),
+          project_lab = $(".projectLink_Lab"),
           changeBg = $("div.changeWeb_main"),
           changeBg_2 = $("div.changeWeb_main_2"),
           changeLab = $("div.changeLab_main"),
