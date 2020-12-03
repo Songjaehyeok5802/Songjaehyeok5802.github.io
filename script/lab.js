@@ -1,4 +1,4 @@
-
+console.clear();
 //  배경 행성
 function bg_3D() {
     const scene = new THREE.Scene();

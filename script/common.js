@@ -1,3 +1,4 @@
+console.clear();
 
 // Header
 function navigation(){

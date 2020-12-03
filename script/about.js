@@ -1,3 +1,5 @@
+console.clear();
+
 new hoverEffect({
     parent: document.querySelector('#changeImg'),
     intensity: 0.2,
