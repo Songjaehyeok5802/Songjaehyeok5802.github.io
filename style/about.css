@@ -1,22 +1,23 @@
 
-body{background-color: #e5e3dd;}
+body{background-color: #e5e3dd; overflow-x: hidden;}
 
-section > div#bg_3D{position: absolute;}
+section > div#bg_3D{position: fixed;}
 
-article{transition: 800ms;}
+article.introduce{transition: 800ms;}
 article > div.imgWrap{width: 425px; top: 50%; transform: translate(-50%, -50%); left: 35%; position: fixed;}
 article > div.imgWrap > div{width: 425px; height: 425px;}
 article > div.imgWrap > p{text-align: center; margin-top: 20px;}
 
-article > div.txtWrap{width: 600px;position: absolute; transform: translateX(-50%); left: 70%; top: 20%; pointer-events: none;}
-article > div.txtWrap > p.title{
-    font-weight: 900; font-size: 70px; margin-bottom: 25px; padding-bottom: 10px; font-family: "Cormorant Garamond";
-}
+article > div.txtWrap{width: 600px; position: fixed; transform: translateX(-50%); left: 70%; top: 20%; pointer-events: none;}
+article > div.txtWrap > p.title{font-weight: 900; font-size: 70px; margin-bottom: 25px; padding-bottom: 10px; font-family: "Cormorant Garamond";}
 article > div.txtWrap > p.title > span{font-family: "Nanum Myeongjo"; font-size: 40px; margin-right: 10px;}
 article > div.txtWrap > span{display: block; height: 1px; width: 450px; border-bottom: 1px solid #3a3a3a4d; margin-bottom: 50px;}
 article > div.txtWrap > p.mainTxt{font-weight: 100; font-size: 20px; line-height: 35px; font-family:'Noto Sans KR';}
 article > div.txtWrap > p.mainTxt > span{font-weight: 400;}
 
+/* article > div.toolTxt{width: 600px; position: fixed;transform: translate(-50%, -50%); left: 70%; top: 50%;font-family:'Noto Sans KR';}
+article > div.toolTxt > h1{ font-size: 30px;}
+article > div.toolTxt > p{ font-size: 20px; line-height: 30px; font-weight: 100; transition: 800ms;}
 
-article.visual{position: fixed;}
-article.visual > div#img3D{transition: 800ms; opacity: 1; position: absolute; z-index: -1;}
+article.greet_wrap{height: 100%; width: 100%; position: fixed; top: 0; display: flex; justify-content: center; align-items: center;}
+article.greet_wrap > p{text-align: center; font-size: 30px; line-height: 40px; font-family:'Noto Sans KR'; font-weight: 400; opacity: 0; transition: 800ms;} */
