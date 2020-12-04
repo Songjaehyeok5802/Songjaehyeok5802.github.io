@@ -52,7 +52,9 @@ header > a.logo > span:nth-child(3){left: 100px;transition: 800ms;}
 header > a.logo > span:nth-child(4){left: 125px;transition: 1000ms;}
 header > a.logo:hover span{text-shadow: 4px 4px 4px #4545458b; color: #454545; box-shadow:  0px 0px #c1ac71;}
 header > nav.nav{float: right; margin-right: 80px;  pointer-events: all;}
-header > nav.nav > div.nav_bar{width: 35px; height: 29px; overflow: hidden; float: right; cursor: pointer;}
+header > nav.nav > div.nav_bar{width: 35px; height: 29px;
+    overflow: hidden; 
+    float: right; cursor: pointer;}
 header > nav.nav > div.nav_bar > span{width: 100%; height: 3px; background-color: #454545; display:block; transition: 500ms;}
 header > nav.nav > div.nav_bar > span.nav_bar_1{}
 header > nav.nav > div.nav_bar > span.nav_bar_2{margin: 10px 0;}
@@ -79,7 +81,7 @@ div.contact_popup{opacity: 0; pointer-events: none; transition: 500ms; display: 
 div.contact_popup > div.contact_bg{position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.95; z-index: 6;}
 div.contact_popup > div.contact_wrap{
     width: 500px; height: 300px; background-color: #fff; border-radius: 15px;
-    z-index: 7; position: fixed; box-shadow:0 0 40px #929292,0 0 40px #929292 ;
+    z-index: 7; position: fixed; box-shadow:0 0 20px #929292,0 0 20px #929292 ;
 }
 div.contact_popup > div.contact_wrap > div.logo{float: right; margin: 50px 50px 0 0; transform: translateZ(60px); font-size: 30px; font-family: "Cormorant Garamond";}
 div.contact_popup > div.contact_wrap > div.contact_txt{display: inline-block; position: absolute; bottom: 50px; left: 50px; font-size: 16px;}
@@ -130,3 +132,25 @@ footer > img.leave{clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); opacity: 0;}
     100%{clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); opacity: 0;}
 }
 footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; font-size: 200px;font-weight: 300;}
+
+
+@media all and (min-width: 481px) and (max-width: 1480px) {
+    section.portfolio > div.title{left: 60px; font-size: 200px;}
+    section.portfolio > div.subway_title{left: 60px;}
+    section.portfolio > div.theeye_title{left: 60px;}
+    div.topBtn:hover{background-color: transparent; color: #454545;}
+}
+
+@media all and (max-width : 480px){
+    div.topBtn{display: none; opacity: 0; pointer-events: none;}
+    header > a.logo{
+        font-size: 30px; margin-left: 30px; display: inline-block; color: #454545 ; text-decoration: none;
+        overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond"; pointer-events: all;
+    }
+    header > a.logo > span{ position: absolute;}
+    header > a.logo > span:nth-child(1){left: 30px;transition: 400ms;}
+    header > a.logo > span:nth-child(2){left: 50px;transition: 600ms;}
+    header > a.logo > span:nth-child(3){left: 70px;transition: 800ms;}
+    header > a.logo > span:nth-child(4){left: 95px;transition: 1000ms;}
+    header > nav.nav{float: right; margin-right: 30px;  pointer-events: all;}
+}

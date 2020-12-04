@@ -1,4 +1,11 @@
-console.clear();
+
+
+const ua = navigator.userAgent;
+const IS_MOBILE = (ua.toLowerCase().match(/mobile/) !== null) ? true : false;
+const IS_TOUCH = 'ontouchstart' in window;
+console.log(IS_MOBILE);
+
+console.log('ontouchend' in window);
 
 // Header
 function navigation(){
@@ -9,42 +16,89 @@ function navigation(){
         menu = $("div.menu");
   let   click = false;
 
-  navBar.click(() => {
-      if(!click){
-          bar_2.css("opacity", 0);
-          bar_1.css({'transform':'rotate('+ 45 +'deg) translate(10px, 10px)' });
-          bar_3.css({'transform':'rotate('+ -45 +'deg) translate(9px, -7px) '});
-          menu.addClass("active");
-          click = true;
-      }else{
-          bar_2.css("opacity", 1),
-          bar_1.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px)' });
-          bar_3.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px) '});
-          menu.removeClass("active");
-          click = false;
-      }
-  });
 
-  navBar.mouseenter(() => {
-      if(!click){
-          bar_2.css({'transform':'rotate('+ -37 +'deg)', "margin-left" : -4 + "px"}),
-          bar_2.css("width", 122.5 + "%"),
-          bar_3.css("width", 100 + "%");
-      }else{
-          bar_1.css({'transform':'rotate('+ 45 +'deg) translate(10px, 10px)' });
-          bar_3.css({'transform':'rotate('+ -45 +'deg) translate(9px, -7px) '});
-      }
-  });
+ /*
+    let startevent = (IS_TOUCH) ? 'touchstart' : 'mousedown';
 
-  navBar.mouseleave(() => {
-      if(!click){
-          bar_2.css({'transform':'rotate('+ 0 +'deg)'})
-          bar_3.css("width", 50 + "%");
-      }else{
-          bar_1.css({'transform':'rotate('+ 0 +'deg) translate(10px, 10px)' });
-          bar_3.css({'transform':'rotate('+ 90 +'deg) translate(-20px, -5px) '});
-      }
-  });
+    navBar.addEventListener(startevent, function(e) {
+
+    }, false);
+    navBar.addEventListener('touchmove', function(e) {
+
+    }, false);
+    navBar.addEventListener('touchend', function(e) {
+
+    }, false);
+    navBar.addEventListener('touchcancel', function(e) {
+
+    }, false);
+
+
+    navBar.addEventListener('mousemove', function(e) {
+
+    }, false);
+    navBar.addEventListener('mouseup', function(e) {
+
+    }, false);
+*/
+
+
+  if (IS_MOBILE) {
+    navBar.click(() => {
+        if(!click){
+            bar_2.css("transform", "scale(0)");
+            bar_1.css({'transform':' translate(0px, 12.5px) rotate('+ 45 +'deg)' });
+            bar_3.css({'transform':'translate(0px, -12.5px) rotate('+ -45 +'deg) ', "width": 100 + "%"});
+            menu.addClass("active");
+            click = true;
+        }else{
+            bar_2.css("transform", "scale(1)"),
+            bar_1.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px)' });
+            bar_3.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px)' , "width": 50 + "%"});
+            menu.removeClass("active");
+            click = false;
+        }
+    });
+  } else {
+    navBar.click(() => {
+        if(!click){
+            bar_2.css("opacity", 0);
+            bar_1.css({'transform':'rotate('+ 45 +'deg) translate(10px, 10px)' });
+            bar_3.css({'transform':'rotate('+ -45 +'deg) translate(9px, -7px) '});
+            menu.addClass("active");
+            click = true;
+        }else{
+            bar_2.css("opacity", 1),
+            bar_1.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px)' });
+            bar_3.css({'transform':'rotate('+ 0 +'deg) translate(0px, 0px) '});
+            menu.removeClass("active");
+            click = false;
+        }
+    });
+
+    navBar.mouseenter(() => {
+        if(!click){
+            bar_2.css({'transform':'rotate('+ -37 +'deg)', "margin-left" : -4 + "px"}),
+            bar_2.css("width", 122.5 + "%"),
+            bar_3.css("width", 100 + "%");
+        }else{
+            bar_1.css({'transform':'rotate('+ 45 +'deg) translate(10px, 10px)' });
+            bar_3.css({'transform':'rotate('+ -45 +'deg) translate(9px, -7px) '});
+        }
+    });
+
+    navBar.mouseleave(() => {
+        if(!click){
+            bar_2.css({'transform':'rotate('+ 0 +'deg)'})
+            bar_3.css("width", 50 + "%");
+        }else{
+            bar_1.css({'transform':'rotate('+ 0 +'deg) translate(10px, 10px)' });
+            bar_3.css({'transform':'rotate('+ 90 +'deg) translate(-20px, -5px) '});
+        }
+    });
+
+  }
+
 
 }
 
@@ -119,9 +173,14 @@ document.addEventListener('mousemove', function(e){
     let card_y = getTransformValue(e.clientY,window.innerHeight,25);
     let text_shadow_x = getTransformValue(e.clientX,window.innerWidth,28);
     let text_shadow_y = getTransformValue(e.clientY,window.innerHeight,28);
-    $(".floating").css("transform","rotateX("+card_y+"deg) rotateY("+card_x+"deg)  translateZ(60px)");
-    $(".floating").css("box-shadow",-card_x+"px "+card_y+"px 55px rgba(255, 255, 255, .2)");
-    $(".text").css("text-shadow",-text_shadow_x+"px "+text_shadow_y+"px 6px rgba(0, 0, 0, .3)");
+    if(IS_MOBILE){
+
+    }else{
+        $(".floating").css("transform","rotateX("+card_y+"deg) rotateY("+card_x+"deg)  translateZ(60px)");
+        $(".floating").css("box-shadow",-card_x+"px "+card_y+"px 55px rgba(255, 255, 255, .2)");
+        $(".text").css("text-shadow",-text_shadow_x+"px "+text_shadow_y+"px 6px rgba(0, 0, 0, .3)");
+    }
+    
 });
 function getTransformValue(v1,v2,value){
     return (v1/v2*value-value/2).toFixed(1);                        
@@ -137,13 +196,18 @@ function footer(){
     const footer_link = $("a.footerLink"),
           footer_img = $("img.footer_img");
 
-    footer_link.mouseover(()=>{
+    if(IS_MOBILE){
         footer_img.addClass("hover");
-        footer_img.removeClass("leave");
-    }).mouseout(()=>{
-        footer_img.removeClass("hover");
-        footer_img.addClass("leave");
-    })
+    }else{
+        footer_link.mouseover(()=>{
+            footer_img.addClass("hover");
+            footer_img.removeClass("leave");
+        }).mouseout(()=>{
+            footer_img.removeClass("hover");
+            footer_img.addClass("leave");
+        })
+    }
+
 }
 
 window.addEventListener("scroll", (e)=>{

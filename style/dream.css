@@ -18,3 +18,10 @@ section > article > div > div.subImg{ margin-bottom: 200px; text-align: left;dis
 section > article > div > div.subImg > img{width: 800px;}
 section > article > div > div.subImg > p{font-family: 'Noto Sans KR'; margin-left: 50px;}
 
+@media all and (max-width : 1480px){
+    section > article {text-align: center; position: relative;width: 80%; margin: 0 auto;}
+    section > article > img.mainImg{width: 100%; padding-top: 500px;}
+    section > article > div > img.subImg{width: 100%; }
+    section > article > div > div > p{font-size: 20px;}
+    section > article > div > div > p.explain{font-size: 20px;}
+}

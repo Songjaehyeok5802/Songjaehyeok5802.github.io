@@ -20,3 +20,11 @@ section > article > div > div > p.explain{font-family: 'Noto Sans KR'; text-alig
 section > article > div > div > a{font-family: 'Noto Sans KR'; text-align: left; font-weight: 300; font-size: 23px; color: #000; float: left; margin: 40px 0 80px; text-decoration: none; position: relative; border: 1px solid #454545; padding: 5px; border-radius: 5px; transition: 500ms;}
 section > article > div > div > a:hover{background-color: #454545; color: #fff;}
 section > article > div > img.subImg{width: 1400px;}
+
+@media all and (max-width : 1480px){
+    section > article{text-align: center; position: relative;width: 80%; margin: 0 auto;}
+    section > article > img.mainImg{width: 100%; padding-top: 500px;}
+    section > article > div > img.subImg{width: 100%;}
+    section > article > div > div > img{width: 100%; margin-bottom: 100px;}
+    section > article > div > div > p.explain{font-size: 20px;}
+}

@@ -90,9 +90,12 @@ article.dream > div > a >img{left: 0;}
 article.subway{}
 article.subway > div.title{}
 
-@media all and (max-width : 1480px){
-    article.work{position: relative; height: 900px;}
-    article.work > div{position: relative; margin: 0 auto; width: 100%; display: flex; flex-direction:column; align-items: center;text-align: center;}
+
+
+/* 481px ~ 1480px */
+@media all and (min-width: 481px) and (max-width: 1480px) {
+    article.work{height: 900px;}
+    article.work > div{width: 100%; display: flex; flex-direction:column; align-items: center;text-align: center;}
     article.work > div > div.title{position: relative; bottom: 0; text-align: center;}
     article.work > div > div.title > a{display: block;margin:30px 0 15px;}
     article.work > div > div.title > span{display: block;}
@@ -100,12 +103,13 @@ article.subway > div.title{}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
 }
 
+
 @media all and (max-width : 480px){
-    article.work{position: relative; height: 250px;border: 1px solid black; margin-bottom: 50px;}
-    article.work > div{position: relative; height: 100%; width: 100%; top: 0; display: flex; flex-direction:column; align-items: center;text-align: center; }
+    article.work{height: 250px; margin-bottom: 50px;}
+    article.work > div{ height: 100%; width: 100%; top: 0; display: flex; flex-direction:column; align-items: center;text-align: center; }
     article.work > div > div.title{position: relative; text-align: center;}
-    article.work > div > div.title > a{display: block;margin:0 0 15px; font-size: 40px;}
-    article.work > div > div.title > span{display: block; font-size: 20px;}
+    article.work > div > div.title > a{display: block;margin:0 0 15px; font-size: 30px;}
+    article.work > div > div.title > span{display: block; font-size: 16px;}
     article > div > a{width: 80%;}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
 }

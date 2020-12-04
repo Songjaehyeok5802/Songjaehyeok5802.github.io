@@ -1,14 +1,16 @@
 
-body{background-color: #e5e3dd; overflow-x: hidden;}
+html{height: 100%; width: 100%;}
+body{background-color: #e5e3dd; overflow-x: hidden;height: 100%; width: 100%;}
 
+section{height: 100%; width: 100%;}
 section > div#bg_3D{position: fixed;}
 
-article.introduce{transition: 800ms;}
-article > div.imgWrap{width: 425px; top: 50%; transform: translate(-50%, -50%); left: 35%; position: fixed;}
+article.introduce{transition: 800ms; width: 70%; height: 100%; position: relative; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;}
+article > div.imgWrap{}
 article > div.imgWrap > div{width: 425px; height: 425px;}
-article > div.imgWrap > p{text-align: center; margin-top: 20px;}
+article > img.pro_img{width: 90%; margin-top: 100px; display: none; pointer-events: none; opacity: 0;}
 
-article > div.txtWrap{width: 600px; position: fixed; transform: translateX(-50%); left: 70%; top: 20%; pointer-events: none;}
+article > div.txtWrap{width: 600px; top: 0; transform: translate(0, 0); left: 0%; pointer-events: none;}
 article > div.txtWrap > p.title{font-weight: 900; font-size: 70px; margin-bottom: 25px; padding-bottom: 10px; font-family: "Cormorant Garamond";}
 article > div.txtWrap > p.title > span{font-family: "Nanum Myeongjo"; font-size: 40px; margin-right: 10px;}
 article > div.txtWrap > span{display: block; height: 1px; width: 450px; border-bottom: 1px solid #3a3a3a4d; margin-bottom: 50px;}
@@ -21,3 +23,20 @@ article > div.toolTxt > p{ font-size: 20px; line-height: 30px; font-weight: 100;
 
 article.greet_wrap{height: 100%; width: 100%; position: fixed; top: 0; display: flex; justify-content: center; align-items: center;}
 article.greet_wrap > p{text-align: center; font-size: 30px; line-height: 40px; font-family:'Noto Sans KR'; font-weight: 400; opacity: 0; transition: 800ms;} */
+
+@media all and (min-width: 481px) and (max-width: 1480px) {
+    article.introduce{width: 85%;}
+}
+
+@media all and (max-width : 480px){
+    article.introduce{flex-direction: column; width: 100%;}
+    article > div.imgWrap{display: none; opacity: 0; pointer-events: none;}
+    article > img.pro_img{width: 90%; margin-top: 100px; display: inline-block; opacity: 1;}
+
+    article > div.txtWrap{width: 100%; top: 0; transform: translate(0, 0); left: 0%; text-align: center; }
+    article > div.txtWrap > p.title{font-weight: 900; font-size: 40px; margin:30px 0 25px; padding-bottom: 10px;}
+    article > div.txtWrap > p.title > span{ font-size: 40px; }
+    article > div.txtWrap > span{display: block; height: 1px; width: 80%; border-bottom: 1px solid #3a3a3a4d; margin:0 auto 50px;}
+    article > div.txtWrap > p.mainTxt{font-weight: 100; font-size: 16px; width: 90%; margin: 0 auto; line-height: 35px; text-align: left;}
+    article > div.txtWrap > p.mainTxt > span{font-weight: 400;}
+}
