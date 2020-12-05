@@ -1,4 +1,4 @@
-console.clear();
+
 
 const checkpoint = window.innerHeight - 500;
 window.addEventListener("scroll", () => {

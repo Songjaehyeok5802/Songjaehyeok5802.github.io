@@ -25,3 +25,20 @@ section > article > div > div.subImg > p{font-family: 'Noto Sans KR'; margin-lef
     section > article > div > div > p{font-size: 20px;}
     section > article > div > div > p.explain{font-size: 20px;}
 }
+
+@media all and (max-width : 480px){
+    section > article{text-align: center; width: 80%; margin: 0 auto; }
+    section > article > img.mainImg{width: 100%; padding-top: 150px;}
+    section > article > div.sticky_wrap{width: 100%;}
+    section > article > div > div > ul{margin: 40px auto 20px; height: 100%;}
+    section > article > div > div > ul > li:first-child{float: none;margin-bottom: 20px;}
+    section > article > div > div > ul > li:last-child{float: none;}
+    section > article > div > div > p.awards{margin-bottom: 50px;}
+    section > article > div > img.subImg{width: 100%;}
+    section > article > div > div > img{width: 100%; margin-bottom: 50px;}
+    section > article > div > div > p.explain{font-size: 20px;width: 100%;}
+
+    section > article > div > div.subImg{width: 100%; flex-direction: column;  margin-bottom: 100px;}
+    section > article > div > div.subImg > img{width: 100%; width: 100%;}
+    section > article > div > div.subImg > p{margin-left: 0;}
+}

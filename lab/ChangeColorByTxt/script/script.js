@@ -1,4 +1,5 @@
-
+console.log($(window).innerWidth());
+console.log($(window).innerHeight());
 
 
 const txt = document.querySelector("#txt");

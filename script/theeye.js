@@ -3,7 +3,7 @@ let IS_SmallWidth = (windowWidth < 500) ? true : false;
 
 
 if(IS_SmallWidth){
-  $("div.subImg > p > br").remove();
+  $("p.explain > br").remove();
 }else{
   const checkpoint = window.innerHeight - 500;
   window.addEventListener("scroll", () => {
@@ -16,3 +16,4 @@ if(IS_SmallWidth){
     document.querySelector(".title").style.opacity = opacityG;
   });
 }
+

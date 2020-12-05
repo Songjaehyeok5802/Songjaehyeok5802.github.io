@@ -9,3 +9,7 @@ button.closeBtn::after{
     transform-origin: 50% 0; top: 100%; left: -1px; border: 1px solid black; display: flex; justify-content: center; align-items: center;
 }
 button.closeBtn:hover{transform: rotateX(90deg)}
+
+@media all and (any-pointer:coarse) {
+    button.closeBtn:hover{transform: rotateX(0deg)}
+}

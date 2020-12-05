@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
  
-html{background-color: #000;}
+html{background-color: #000; width: 100%;}
 header, article{opacity: 0; animation: opaAni 1200ms linear forwards;}
 @keyframes opaAni{
     0%{opacity: 0;}
@@ -113,15 +113,20 @@ div.topBtn:hover{background-color: #fdfff5; color: #454545;}
 
 
 /*  article greet  */
-article.greet{pointer-events: none; height: 1080px;}
-article.greet > p{
+article.greet{pointer-events: none;}
+article.greet > p.pc{
     position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 32px;  opacity: 1;
     line-height: 60px; font-weight: 400; color: #fff; letter-spacing: 1px; word-spacing: -0.25; 
     font-family: 'Nanum Myeongjo'; user-select: none; animation-delay: 1s;
     /* text-align: center; */
     display: flex; flex-direction: column; align-items: center;
 }
-
+article.greet > p.mobile{
+    position: absolute; top: 72%; left: 50%; transform: translate(-50%, -50%); font-size: 16px;  opacity: 0;
+    line-height: 40px; font-weight: 400; color: #fff; width: 80%;
+    font-family: 'Nanum Myeongjo'; user-select: none;text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+}
 article.greet > div.scrollArea{position: absolute; left: 50%; transform: translateX(-50%);bottom: 20px; width: 100px; height: 100px;}
 article.greet > div > span.scrollDot{
     display: block; position: absolute; width: 10px; height: 10px; background-color: #fff; left: 50%; transform: translateX(-50%);
@@ -180,5 +185,38 @@ article.last{margin-bottom: 150px;}
 }
 
 @media all and (max-width : 480px){
+    .scrollAni{opacity: 1;}
 
+    div.topBtn{display: none; opacity: 0; pointer-events: none;}
+    header > a.logo{font-size: 30px;}
+    header > a.logo > span{ position: absolute;}
+    header > a.logo > span:nth-child(1){left: 30px;transition: 400ms;}
+    header > a.logo > span:nth-child(2){left: 50px;transition: 600ms;}
+    header > a.logo > span:nth-child(3){left: 70px;transition: 800ms;}
+    header > a.logo > span:nth-child(4){left: 95px;transition: 1000ms;}
+    header > nav.nav{float: right; margin-right: 30px;  pointer-events: all;}
+
+    div.contact_popup > div.contact_wrap{width: 90%; height: 300px;}
+    div.contact_popup > div.contact_wrap > div.contact_txt{left: 20px;}
+    div.contact_popup > div.contact_wrap > div.logo{display: none;}
+    div.contact_popup > div.contact_wrap > div.contact_txt > p{line-height: 25px; margin-bottom: 40px;font-size: 15px;}
+    div.contact_popup > div.contact_wrap > div.contact_txt > p > span{ line-height: 30px; font-size: 20px;}
+    div.contact_popup > div.contact_wrap > div.contact_txt > ul{ float: left;}
+    div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{display: none;}
+    div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px; font-size: 15px;}
+    
+    article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
+    article > div > a:hover > span{opacity: 0;}
+
+    article.greet{pointer-events: none;}
+    article.greet > p.pc{ opacity: 0; display: none; pointer-events: none;}
+    article.greet > p.mobile{opacity: 1;}
+
+    article.work{position: relative; height: 100%; width: 100%; margin-bottom: 100px; transition: 0;}
+    article.work > div{width: 100%; height: 100%; top: 20%;}
+    
+    article > div > a{width: 80%; height: 100%;}
+    article > div > a > img{width: 100%;}
+    article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
+    article.work > div > div.title > p{width: 80%; margin: 0 auto; font-size: 16px;line-height: 35px; margin-top: 30px; text-align: left;}
 }

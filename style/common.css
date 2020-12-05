@@ -78,7 +78,7 @@ header > nav > div.menu > ul > li:hover > a{transform: rotateX(90deg)}
 
 /* -- Contact Popup --  */
 div.contact_popup{opacity: 0; pointer-events: none; transition: 500ms; display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; position: fixed; z-index: 5;}
-div.contact_popup > div.contact_bg{position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.95; z-index: 6;}
+div.contact_popup > div.contact_bg{position: fixed; width: 100%; height: 100%; background-color: #000;opacity: 0.5; z-index: 6;}
 div.contact_popup > div.contact_wrap{
     width: 500px; height: 300px; background-color: #fff; border-radius: 15px;
     z-index: 7; position: fixed; box-shadow:0 0 10px #929292,0 0 10px #929292 ;
@@ -147,11 +147,11 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
 
 
 @media all and (max-width : 480px){
+
+    .scrollAni{opacity: 1;}
+
     div.topBtn{display: none; opacity: 0; pointer-events: none;}
-    header > a.logo{
-        font-size: 30px; margin-left: 30px; display: inline-block; color: #454545 ; text-decoration: none;
-        overflow: hidden; vertical-align: top; font-family: "Cormorant Garamond"; pointer-events: all;
-    }
+    header > a.logo{ margin-left: 30px;}
     header > a.logo > span{ position: absolute;}
     header > a.logo > span:nth-child(1){left: 30px;transition: 400ms;}
     header > a.logo > span:nth-child(2){left: 50px;transition: 600ms;}
@@ -159,9 +159,9 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
     header > a.logo > span:nth-child(4){left: 95px;transition: 1000ms;}
     header > nav.nav{float: right; margin-right: 30px;  pointer-events: all;}
 
+    section.portfolio{width: 100%; margin: 0 auto;}
     section.portfolio > div.title{display: none;}
 
-    div.contact_popup > div.contact_bg{opacity: 0.5;}
     div.contact_popup > div.contact_wrap{width: 90%; height: 300px;}
     div.contact_popup > div.contact_wrap > div.contact_txt{left: 20px;}
     div.contact_popup > div.contact_wrap > div.logo{display: none;}
@@ -170,4 +170,10 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
     div.contact_popup > div.contact_wrap > div.contact_txt > ul{ float: left;}
     div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{display: none;}
     div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px; font-size: 15px;}
+    header > nav > div.menu > ul > li:hover > a{transform: rotateX(0deg)}
+    
+    footer{margin: 150px 0 150px;}
+    footer > img{width: 80%; height: 200px;}
+    footer > a{font-size: 100px;font-weight: 300;}
+
 }
