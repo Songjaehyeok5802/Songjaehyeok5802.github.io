@@ -15,7 +15,6 @@ window.addEventListener("scroll", () => {
   if(IS_MOBILE){
 
   }else{
-    console.log(123);
     let storyPosY = Math.max(0, currentScroll - story3D.offset().top);
     story_wrap.css({"transform" : "translateX(" + -1 * storyPosY +"px)"});
     if(currentScroll >= story3D.offset().top  && currentScroll < story3D.offset().top + story3D.innerHeight()){
@@ -40,6 +39,7 @@ window.addEventListener("scroll", () => {
 if(IS_MOBILE){
   
 }else{
+  console.log(123);
   story3D.css({"width" : 8000, "height" : 7300});
 }
 

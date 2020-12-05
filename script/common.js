@@ -176,6 +176,7 @@ document.addEventListener('mousemove', function(e){
     if(IS_MOBILE){
 
     }else{
+        console.log(13);
         $(".floating").css("transform","rotateX("+card_y+"deg) rotateY("+card_x+"deg)  translateZ(60px)");
         $(".floating").css("box-shadow",-card_x+"px "+card_y+"px 55px rgba(255, 255, 255, .2)");
         $(".text").css("text-shadow",-text_shadow_x+"px "+text_shadow_y+"px 6px rgba(0, 0, 0, .3)");
