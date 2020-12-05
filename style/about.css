@@ -24,11 +24,11 @@ article > div.toolTxt > p{ font-size: 20px; line-height: 30px; font-weight: 100;
 article.greet_wrap{height: 100%; width: 100%; position: fixed; top: 0; display: flex; justify-content: center; align-items: center;}
 article.greet_wrap > p{text-align: center; font-size: 30px; line-height: 40px; font-family:'Noto Sans KR'; font-weight: 400; opacity: 0; transition: 800ms;} */
 
-@media all and (min-width: 481px) and (max-width: 1480px) {
+@media all and (min-width: 1201px) and (max-width: 1480px) {
     article.introduce{width: 85%;}
 }
 
-@media all and (max-width : 480px){
+@media all and (max-width : 1200px){
     article.introduce{flex-direction: column; width: 100%;}
     article > div.imgWrap{display: none; opacity: 0; pointer-events: none;}
     article > img.pro_img{width: 90%; margin-top: 100px; display: inline-block; opacity: 1;}

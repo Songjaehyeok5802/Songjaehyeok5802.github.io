@@ -45,6 +45,8 @@ section > article > div > div.story3D > div.story_wrap > img{width: 1400px; floa
      section > article > div > div.main3D > img{width: 100%;}
      section > article > div > div > p.explain{font-size: 20px;}
      section > article > div > p.explain3D{font-size: 20px;}
+}
+@media all and (max-width : 1480px) and (any-pointer:coarse){
      section > article > div > div.story3D{position: relative; width: 100%;}
      section > article > div > div.story3D > div.story_wrap {position: relative; width: 100%; top: 0px; flex-direction: column;} 
      section > article > div > div.story3D > div.story_wrap > img{width: 100%; float: none; margin-bottom: 70px;}

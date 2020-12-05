@@ -138,8 +138,13 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
     section.portfolio > div.title{left: 60px; font-size: 200px;}
     section.portfolio > div.subway_title{left: 60px;}
     section.portfolio > div.theeye_title{left: 60px;}
+}
+@media all and (min-width: 481px) and (max-width: 1480px) and (any-pointer:coarse) {
     div.topBtn:hover{background-color: transparent; color: #454545;}
 }
+
+
+
 
 @media all and (max-width : 480px){
     div.topBtn{display: none; opacity: 0; pointer-events: none;}

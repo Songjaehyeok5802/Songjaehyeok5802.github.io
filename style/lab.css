@@ -170,11 +170,13 @@ article.last{margin-bottom: 150px;}
 
 
 
-@media all and (min-width: 481px) and (max-width: 1480px) {
+@media all and (min-width: 481px) and (max-width: 1480px){
     article.greet > p{font-size: 25px;}
     article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
     article > div > a:hover > span{opacity: 0;}
-
+}
+@media all and (min-width: 481px) and (max-width: 1480px) and (any-pointer:coarse) {
+    div.topBtn:hover{background-color: transparent; color: #fdfff5;}
 }
 
 @media all and (max-width : 480px){
