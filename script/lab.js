@@ -1,7 +1,6 @@
 
-    const articleWork = $("article.work").eq(0);
-    articleWork.css({"padding-top" : $(window).innerHeight() + 50})
-    // $(window).innerHeight();
+    const articleGreet = $("article.greet");
+    articleGreet.css({"height" : $(window).innerHeight()})
 
 //  배경 행성
 function bg_3D() {

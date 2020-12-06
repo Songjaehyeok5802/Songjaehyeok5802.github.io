@@ -141,6 +141,7 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
 }
 @media all and (min-width: 481px) and (max-width: 1480px) and (any-pointer:coarse) {
     div.topBtn:hover{background-color: transparent; color: #454545;}
+    header > nav > div.menu > ul > li:hover > a{transform: rotateX(0deg)}
 }
 
 
@@ -158,6 +159,7 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
     header > a.logo > span:nth-child(3){left: 70px;transition: 800ms;}
     header > a.logo > span:nth-child(4){left: 95px;transition: 1000ms;}
     header > nav.nav{float: right; margin-right: 30px;  pointer-events: all;}
+    header > nav > div.menu > ul > li:hover > a{transform: rotateX(0deg)}
 
     section.portfolio{width: 100%; margin: 0 auto;}
     section.portfolio > div.title{display: none;}
@@ -170,7 +172,7 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
     div.contact_popup > div.contact_wrap > div.contact_txt > ul{ float: left;}
     div.contact_popup > div.contact_wrap > div.contact_txt > ul.tool{display: none;}
     div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px; font-size: 15px;}
-    header > nav > div.menu > ul > li:hover > a{transform: rotateX(0deg)}
+
     
     footer{margin: 150px 0 150px;}
     footer > img{width: 80%; height: 200px;}

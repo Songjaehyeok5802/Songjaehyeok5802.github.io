@@ -1,5 +1,5 @@
-console.log($(window).innerWidth());
-console.log($(window).innerHeight());
+
+
 
 
 const txt = document.querySelector("#txt");
@@ -16,7 +16,7 @@ function three(){
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     document.getElementById("obj").appendChild(renderer.domElement);
-    control = new THREE.OrbitControls(camera, renderer.domElement);
+    // control = new THREE.OrbitControls(camera, renderer.domElement);
 
     renderer.setSize(window.innerWidth, window.innerHeight);
     window.addEventListener("resize", function(){

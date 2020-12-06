@@ -1,3 +1,5 @@
+console.log($(window).innerWidth());
+console.log($(window).innerHeight());
 
 // const closeBtn = $("button.closeBtn");
 // closeBtn.click(()=>{
