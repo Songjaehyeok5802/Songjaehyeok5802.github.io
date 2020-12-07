@@ -127,6 +127,7 @@ article.subway > div.wrap{}
     article > div > a{width: 80%; overflow: visible;}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
     article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
+    article > div > a:hover > span{opacity: 0;}
 }
 @media all and (min-width: 481px) and (max-width: 1480px) and (any-pointer:coarse) {
     article.greet > div.object > span:hover::after{width: 0;}
@@ -137,8 +138,10 @@ article.subway > div.wrap{}
 
 
 @media all and (max-width : 480px){
+    div.intro_wrap{font-size: 20px;}
     article.greet > div.object{opacity: 0; display: none; pointer-events: none;}
-    
+  
+
     article.secret > div.wrap{flex-direction: column;}
     article.secret > div > div.title{text-align: center;}
     article.dream > div.wrap{flex-direction: column;}
@@ -151,4 +154,7 @@ article.subway > div.wrap{}
     article.work > div > div.title > span{display: block; font-size: 16px;  text-align: center;}
     article > div > a{width: 80%;}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
+
+    article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
+    article > div > a:hover > span{opacity: 0;}
 }
