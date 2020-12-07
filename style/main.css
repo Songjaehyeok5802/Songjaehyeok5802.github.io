@@ -137,6 +137,8 @@ article.subway > div.wrap{}
 
 
 @media all and (max-width : 480px){
+    article.greet > div.object{opacity: 0; display: none; pointer-events: none;}
+    
     article.secret > div.wrap{flex-direction: column;}
     article.secret > div > div.title{text-align: center;}
     article.dream > div.wrap{flex-direction: column;}
