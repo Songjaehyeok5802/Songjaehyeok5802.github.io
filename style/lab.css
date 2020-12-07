@@ -169,7 +169,7 @@ article > div > a > span{
 }
 article > div > a:hover > span{opacity: 1;}
 article > div > a > img{width: 1000px; box-shadow: 0 0  20px #e3e3e360, 0 0 20px #e3e3e360; border: 5px solid #fff; transition: 800ms;}
-article > div > a:hover > img{filter:blur(2px); transform: scale(1.3);}
+article > div > a:hover > img{filter:blur(2px); transform: scale(1.1);}
 article.last{margin-bottom: 150px;}
 
 

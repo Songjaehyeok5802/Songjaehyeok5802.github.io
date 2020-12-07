@@ -17,32 +17,6 @@ function navigation(){
   let   click = false;
 
 
- /*
-    let startevent = (IS_TOUCH) ? 'touchstart' : 'mousedown';
-
-    navBar.addEventListener(startevent, function(e) {
-
-    }, false);
-    navBar.addEventListener('touchmove', function(e) {
-
-    }, false);
-    navBar.addEventListener('touchend', function(e) {
-
-    }, false);
-    navBar.addEventListener('touchcancel', function(e) {
-
-    }, false);
-
-
-    navBar.addEventListener('mousemove', function(e) {
-
-    }, false);
-    navBar.addEventListener('mouseup', function(e) {
-
-    }, false);
-*/
-
-
   if (IS_MOBILE) {
     navBar.click(() => {
         if(!click){
@@ -231,6 +205,7 @@ window.addEventListener("scroll", (e)=>{
 })
 
 
+
 function init(){
     goTop();
     navigation();
@@ -238,4 +213,6 @@ function init(){
     clickProject();
     footer();
 }
+
+
 init();
