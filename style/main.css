@@ -28,6 +28,14 @@ div.intro_wrap > p.second_intro{position: absolute;top: 50%; left: 50%; transfor
 
 /*  article greet  */
 article.greet{height: 1080px;}
+article.greet > div.object{font-family: 'Noto Sans KR'; color: #454545; font-size: 17px; position: absolute; top: 50px; left: 50%; transform: translateX(-50%); text-align: center; display: inline-block; padding: 15px;}
+article.greet > div.object > span{position: relative; cursor: default;}
+article.greet > div.object > span::after{content: ""; position: absolute; width: 0; height: 1px; background-color: #454545; left: 0; bottom: -5px; transition: 300ms;}
+article.greet > div.object > p{border: 1px solid #454545; pointer-events: none; border-radius: 5px; padding: 15px; margin-top: 25px; line-height: 30px; opacity: 0; transition: 300ms;}
+article.greet > div.object > span:hover::after{width: 100%;}
+article.greet > div.object > span.active::after{width: 100%;}
+article.greet > div.object > span:hover + p {opacity: 1;}
+
 article.greet > p{
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 32px; 
     line-height: 60px; font-weight: 400; color: #fff; text-align: center; letter-spacing: 1px; word-spacing: -0.25;
@@ -120,6 +128,12 @@ article.subway > div.wrap{}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
     article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
 }
+@media all and (min-width: 481px) and (max-width: 1480px) and (any-pointer:coarse) {
+    article.greet > div.object > span:hover::after{width: 0;}
+    article.greet > div.object > span:hover + p {opacity: 0;}
+    article.greet > div.object > span.active::after{width: 100%;}
+}
+
 
 
 @media all and (max-width : 480px){

@@ -121,14 +121,35 @@ function scrollOpacity(){
     });
 }
 
+function objectBtn(){
+  const IS_MOBILE = (ua.toLowerCase().match(/mobile/) !== null) ? true : false,
+        IS_TOUCH = 'ontouchstart' in window,
+        objTitle = document.querySelector("span.objTitle"),
+        objExplain = document.querySelector("p.objExplain");
+  let isActive = false;
+
+  if(IS_MOBILE && IS_TOUCH){
+    objTitle.addEventListener("touchstart", ()=>{
+      if(!isActive){
+        objExplain.style.opacity = 1;
+        objTitle.classList.add("active");
+        isActive = true;
+      }else{
+        objExplain.style.opacity = 0;
+        objTitle.classList.remove("active");
+        isActive = false;
+      }
+    })
+  }
+}
+
 function Init(){
     // Three Js
     bg_3D();
 
 
     // Vanila Js
-    // scrollOpacity();
-
+    objectBtn();
     const greet = document.querySelector(".greet");
     greet.style.height=window.innerHeight + "px";
 }
