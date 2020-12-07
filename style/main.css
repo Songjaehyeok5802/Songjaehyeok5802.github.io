@@ -28,10 +28,10 @@ div.intro_wrap > p.second_intro{position: absolute;top: 50%; left: 50%; transfor
 
 /*  article greet  */
 article.greet{height: 1080px;}
-article.greet > div.object{font-family: 'Noto Sans KR'; color: #454545; font-size: 17px; position: absolute; top: 50px; left: 50%; transform: translateX(-50%); text-align: center; display: inline-block; padding: 15px;}
+article.greet > div.object{font-family: 'Noto Sans KR'; color: #454545; font-size: 16px; position: absolute; top: 40px; left: 50%; transform: translateX(-50%); text-align: center; display: inline-block; padding: 15px;}
 article.greet > div.object > span{position: relative; cursor: default;}
-article.greet > div.object > span::after{content: ""; position: absolute; width: 0; height: 1px; background-color: #454545; left: 0; bottom: -5px; transition: 300ms;}
-article.greet > div.object > p{border: 1px solid #454545; pointer-events: none; border-radius: 5px; padding: 15px; margin-top: 25px; line-height: 30px; opacity: 0; transition: 300ms;}
+article.greet > div.object > span::after{content: ""; position: absolute; width: 0; height: 1px; background-color: #454545; left: 0; bottom: -1px; transition: 300ms;}
+article.greet > div.object > p{background-color: #ffffff87; pointer-events: none; border-radius: 5px; padding: 10px; margin-top: 20px; line-height: 25px; opacity: 0; transition: 300ms;}
 article.greet > div.object > span:hover::after{width: 100%;}
 article.greet > div.object > span.active::after{width: 100%;}
 article.greet > div.object > span:hover + p {opacity: 1;}
