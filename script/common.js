@@ -7,6 +7,30 @@ console.log(IS_MOBILE);
 
 console.log('ontouchend' in window);
 
+function smallDevice(){
+    const windowWidth = $( window ).width();
+    let IS_SmallWidth = (windowWidth < 500) ? true : false;
+    
+    
+    if(IS_SmallWidth){
+      $("p.explain > br").remove();
+    }else{
+      const checkpoint = window.innerHeight - 500;
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll <= checkpoint) {
+          opacityG = 1 - currentScroll / checkpoint;
+        } else {
+          opacityG = 0;
+        }
+        document.querySelector(".title").style.opacity = opacityG;
+      });
+    }
+}
+
+
+
+
 // Header
 function navigation(){
   const navBar = $("div.nav_bar"),
@@ -208,6 +232,7 @@ window.addEventListener("scroll", (e)=>{
 
 function init(){
     goTop();
+    smallDevice();
     navigation();
     contactBtn();
     clickProject();

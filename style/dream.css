@@ -2,8 +2,8 @@
 
 
 
-section > article{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
-section > article > img.mainImg{width: 1400px; padding-top: 500px;}
+section > article{text-align: center; position: relative;width: 100%; margin: 0 auto;}
+section > article > img.mainImg{width: 100%; padding-top: 500px;}
 section > article > div.sticky_wrap{ margin-top: 50px;}
 section > article > div > div.sticky_Title{position: sticky; font-size: 30px; top: 50px; font-family: "Cormorant Garamond";}
 section > article > div > div.txtwrap{ margin: 50px 0 150px;}
@@ -15,15 +15,14 @@ section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p{ font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
 
 section > article > div > div.subImg{ margin-bottom: 200px; text-align: left;display: flex; align-items: center;}
-section > article > div > div.subImg > img{width: 800px;}
+section > article > div > div.subImg > img{width: 80%;}
 section > article > div > div.subImg > p{font-family: 'Noto Sans KR'; margin-left: 50px;}
 
 @media all and (max-width : 1480px){
-    section > article {text-align: center; position: relative;width: 80%; margin: 0 auto;}
-    section > article > img.mainImg{width: 100%; padding-top: 500px;}
-    section > article > div > img.subImg{width: 100%; }
+    section > article > img.mainImg{padding-top: 500px;}
+    section > article > div > div.subImg{flex-direction: column;}
     section > article > div > div > p{font-size: 20px;}
-    section > article > div > div > p.explain{font-size: 20px;}
+    section > article > div > div.subImg > p{font-size: 20px; margin-top: 40px;}
 }
 
 @media all and (max-width : 480px){

@@ -107,7 +107,7 @@ div.topBtnActive{ opacity: 1; pointer-events: all; cursor: pointer;}
 div.topBtn:hover{background-color: #454545; color: #fdfff5;}
 
 
-section.portfolio{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
+section.portfolio{text-align: center; position: relative;width: 80%; margin: 0 auto;}
 section.portfolio > div.title{margin-left: -24px; font-size: 300px; font-weight: 700; color: #4c4c4c; margin-top: 200px; position: fixed; z-index: -1; font-family: "Noto Sans KR Cormorant Garamond";}
 section.portfolio > div.subway_title{margin-left: -13px;}
 section.portfolio > div.theeye_title{margin-left: -8px;}
@@ -115,10 +115,10 @@ section.portfolio > div.theeye_title{margin-left: -8px;}
   /* Scroll */
 .scrollAni{opacity: 0; transition: 1200ms;}
 
-
-footer{margin: 300px 0 350px; text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
+/* footer */
+footer{margin: 300px auto 350px; width: 55%; text-align: center; position: relative; display: flex; justify-content: center; align-items: center; }
 footer > img{
-    position: absolute; z-index: -2; transition: 500ms; width: 960px; height: 540px;
+    position: absolute; z-index: -2; transition: 500ms; width: 100%; 
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); 
 }
 footer > img.hover{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1;}
@@ -174,8 +174,7 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
     div.contact_popup > div.contact_wrap > div.contact_txt > ul > li{margin-bottom: 10px; font-size: 15px;}
 
     
-    footer{margin: 150px 0 150px;}
-    footer > img{width: 80%; height: 200px;}
+    footer{margin: 150px auto 150px; width: 80%;}
     footer > a{font-size: 100px;font-weight: 300;}
 
 }

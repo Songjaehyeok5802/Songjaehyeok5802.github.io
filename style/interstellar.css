@@ -6,8 +6,8 @@ body{overflow-X: hidden;}
 
 
 
-section > article{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
-section > article > img.mainImg{width: 1400px; padding-top: 500px;}
+section > article{text-align: center; position: relative;width: 100%; margin: 0 auto;}
+section > article > img.mainImg{width: 100%; padding-top: 500px;}
 section > article > div.sticky_wrap{ margin-top: 50px;}
 section > article > div > div.sticky_Title{position: sticky; font-size: 30px; top: 50px; font-family: "Cormorant Garamond"; }
 section > article > div > div.txtwrap{ margin: 50px 0 90px; }
@@ -24,33 +24,26 @@ section > article > div > div > p.web > a:hover{background-color: #454545; color
 section > article > div > div > p.explain{font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
 
 section > article > div > div.about{text-align: left;}
-section > article > div > div.about > video{width: 800px;}
+section > article > div > div.about > video{width: 50%;}
 section > article > div > div.story{text-align: right; margin-top: 150px;}
-section > article > div > div.story > video{width: 800px;}
+section > article > div > div.story > video{width: 50%;}
 
 section > article > div > p.explain3D{font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px; margin-top: 200px;}
 section > article > div > div.main3D{margin-top: 100px;}
-section > article > div > div.main3D > img{width: 1400px;}
+section > article > div > div.main3D > img{width: 100%;}
 
 section > article > div > div.story3D{position: relative; width: 100%;}
 section > article > div > div.story3D > div.story_wrap {position: absolute; display: flex; top: 150px;} 
-section > article > div > div.story3D > div.story_wrap > img{width: 1400px; float: left; margin-right: 200px;}
+section > article > div > div.story3D > div.story_wrap > img{width: 100%; float: left; margin-right: 200px;}
 
 @media all and (max-width : 1480px){
-     section > article{text-align: center; position: relative;width: 80%; margin: 0 auto;}
-     section > article > img.mainImg{width: 100%; padding-top: 500px;}
-     section > article > div.sticky_wrap{width: 100%;}
-     section > article > div > img.subImg{width: 100%;}
-     section > article > div > div > img{width: 100%; margin-bottom: 100px;}
-     section > article > div > div.main3D > img{width: 100%;}
+     section > article > img.mainImg{padding-top: 500px;}
+     section > article > div > div > img{ margin-bottom: 100px;}
      section > article > div > div > p.explain{font-size: 20px;}
      section > article > div > p.explain3D{font-size: 20px;}
+     section > article > div > div.story3D > div.story_wrap {position: relative;  top: 0px; flex-direction: column;} 
+     section > article > div > div.story3D > div.story_wrap > img{ margin-bottom: 70px;}
 }
-@media all and (max-width : 1480px) and (any-pointer:coarse){
-     section > article > div > div.story3D{position: relative; width: 100%;}
-     section > article > div > div.story3D > div.story_wrap {position: relative; width: 100%; top: 0px; flex-direction: column;} 
-     section > article > div > div.story3D > div.story_wrap > img{width: 100%; float: none; margin-bottom: 70px;}
- }
 
  @media all and (max-width : 480px){
      section > article > div > div.about > video{width: 100%;}

@@ -1,7 +1,9 @@
 
-section > article{text-align: center; position: relative;width: 1400px; margin: 0 auto;}
-section > article > img.mainImg{width: 1400px; padding-top: 500px;}
-section > article > div.sticky_wrap{ margin-top: 50px;}
+html, body{width: 100%;}
+section{width: 100%;position: relative;}
+section > article{text-align: center; position: relative;width: 100%; margin: 0 auto;}
+section > article > img.mainImg{width: 100%; padding-top: 500px;}
+section > article > div.sticky_wrap{ margin-top: 50px; width: 100%; position: relative;}
 section > article > div > div.sticky_Title{position: sticky; font-size: 30px; top: 50px; font-family: "Cormorant Garamond";}
 section > article > div > div.txtwrap{ margin: 50px 0 90px;}
 section > article > div > div > ul{margin: 90px auto 45px;height: 65px;}
@@ -12,20 +14,20 @@ section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p.awards{font-family: 'Noto Sans KR'; text-align: left;font-size: 20px;font-weight: 300;margin-bottom: 90px;line-height: 35px;}
 section > article > div > div > p.awards > span{ font-family: "Cormorant Garamond"; font-weight: 600;}
 section > article > div > div > p.explain{font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
-section > article > div > img.subImg{width: 1400px;}
+section > article > div > img.subImg{width: 100%;}
 
 section > article > div > iframe{margin-bottom: 100px;}
-section > article > div > div > img{width: 1400px; margin-bottom: 100px;}
+section > article > div > div > img{width: 100%; margin-bottom: 100px;}
 section > article > div > div > img:last-child{margin: 0;}
 
 @media all and (max-width : 1480px){
-    section > article{text-align: center; position: relative;width: 80%; margin: 0 auto;}
-    section > article > img.mainImg{width: 100%; padding-top: 500px;}
-    section > article > div > img.subImg{width: 100%;}
-    section > article > div > iframe{width: 100%;}
-    section > article > div > div > img{width: 100%; margin-bottom: 100px;}
+    section > article > img.mainImg{padding-top: 500px;}
+    section > article > div > div > img{margin-bottom: 100px;}
     section > article > div > div > p.explain{font-size: 20px;}
 }
+
+
+
 
 
 @media all and (max-width : 480px){

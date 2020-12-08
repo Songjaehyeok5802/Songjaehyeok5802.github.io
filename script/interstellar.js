@@ -1,7 +1,19 @@
 
-
-
+const story3D = $("div.story3D");
+const story_wrap = $("div.story_wrap");
 const checkpoint = window.innerHeight - 500;
+let windowW = $( window ).width();
+
+
+console.log(story_wrap.css({"transform" : "translateX"}))
+
+  // section > article > div > div.story3D > div.story_wrap {position: relative;  top: 0px; flex-direction: column;} 
+  // section > article > div > div.story3D > div.story_wrap > img{ float: none; margin-bottom: 70px;}
+
+window.addEventListener("resize", ()=>{
+  windowW = $( window ).width();
+})
+
 window.addEventListener("scroll", () => {
   let currentScroll = window.scrollY;
   if (currentScroll <= checkpoint) {
@@ -12,7 +24,9 @@ window.addEventListener("scroll", () => {
   document.querySelector(".title").style.opacity = opacityG;
   
   
-  if(IS_MOBILE){
+
+
+  if(IS_MOBILE  || windowW < 1480){
 
   }else{
     let storyPosY = Math.max(0, currentScroll - story3D.offset().top);
@@ -34,12 +48,10 @@ window.addEventListener("scroll", () => {
 });
 
 
-  const story3D = $("div.story3D");
-  const story_wrap = $("div.story_wrap");
-if(IS_MOBILE){
-  
+
+
+if(IS_MOBILE || windowW < 1480){
 }else{
-  console.log(123);
   story3D.css({"width" : 8000, "height" : 7300});
 }
 
