@@ -159,8 +159,8 @@ article.work > div{
     position: relative; margin: 0 auto; width: 1400px; height: 800px; top: 20%; display: flex;
     flex-direction: column; justify-content: center; align-items: center;
 }
-article.work > div > div.title{}
-article.work > div > div.title > p{color: #fff; font-size: 25px;line-height: 35px; margin-top: 80px; text-align: center;}
+article.work > div > div.explain_lab{}
+article.work > div > div.explain_lab > p{color: #fff; font-size: 25px;line-height: 35px; margin-top: 80px; text-align: center;}
 article > div > a{position: relative;width: 1000px; height: 550px;  overflow: hidden;}
 article > div > a > span{
     color: #000; text-decoration: none; border-bottom: 1px solid #000; padding: 10px; 
@@ -220,5 +220,5 @@ article.last{margin-bottom: 150px;}
     article > div > a{width: 80%; height: 100%;}
     article > div > a > img{width: 100%;}
     article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
-    article.work > div > div.title > p{width: 80%; margin: 0 auto; font-size: 16px;line-height: 35px; margin-top: 30px; text-align: left;}
+    article.work > div > div.explain_lab > p{width: 80%; margin: 0 auto; font-size: 16px;line-height: 35px; margin-top: 30px; text-align: left;}
 }

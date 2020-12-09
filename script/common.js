@@ -23,7 +23,10 @@ function smallDevice(){
         } else {
           opacityG = 0;
         }
-        document.querySelector(".title").style.opacity = opacityG;
+        const titleEl = document.querySelector(".title");
+        if(titleEl != null){
+            document.querySelector(".title").style.opacity = opacityG;
+        }
       });
     }
 }
