@@ -15,8 +15,8 @@ section > article > div > div > ul > li:last-child{float: right;}
 section > article > div > div > p{ font-family: 'Noto Sans KR'; text-align: left; font-weight: 400; font-size: 23px; line-height: 40px;}
 
 section > article > div > div.subImg{ margin-bottom: 200px; text-align: left;display: flex; align-items: center;}
-section > article > div > div.subImg > img{width: 80%;}
-section > article > div > div.subImg > p{font-family: 'Noto Sans KR'; margin-left: 50px;}
+section > article > div > div.subImg > img{width: 70%;}
+section > article > div > div.subImg > p{font-family: 'Noto Sans KR'; margin-left: 50px; width: 30%;}
 
 @media all and (max-width : 1480px){
     section > article > img.mainImg{padding-top: 500px;}
