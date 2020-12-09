@@ -66,12 +66,12 @@ article.greet > div#bg_3D{position: fixed; z-index: -3;}
 article.work{position: relative; height: 900px;}
 article.work > div{
     position: relative; margin: 0 auto; width: 1400px; height: 550px; top: 20%; display: flex; justify-content: space-between; align-items: flex-end;}
-article.work > div > div.title{position: relative; bottom: 0;}
-article.work > div > div.title > a{
+article.work > div > div.titleTxt{position: relative; bottom: 0;}
+article.work > div > div.titleTxt > a{
     font-size: 70px; font-weight: 700; text-decoration: none; color: black; font-family: "Cormorant Garamond"; display: block;
     margin-bottom: 15px; 
 }
-article.work > div > div.title > span{font-size: 25px; font-weight: 400; font-family:'Noto Sans KR'; text-transform: none; display: block; text-align: right;}
+article.work > div > div.titleTxt > span{font-size: 25px; font-weight: 400; font-family:'Noto Sans KR'; text-transform: none; display: block; text-align: right;}
 article > div > a{overflow: hidden; display: inline-block; position: relative;}
 article > div > a > span{
     color: #fff; text-decoration: none; border-bottom: 1px solid #fff; padding: 10px; 
@@ -87,21 +87,20 @@ article > div > a:hover > span{opacity: 1;}
 /* article */
 article.theeye{}
 article.theeye > div.wrap{}
-article.theeye > div > div.title{}
+article.theeye > div > div.titleTxt{}
 article.theeye > div > a{}
 article.theeye > div > a >img{}
 
 article.secret{}
 article.secret > div.wrap{flex-direction: row-reverse;}
-article.secret > div > div.title{text-align: left;}
+article.secret > div > div.titleTxt{text-align: left;}
 article.secret > div > a >img{left: 0;}
 
 
 article.dream{}
 article.dream > div.wrap{flex-direction: row-reverse;}
-article.dream > div > div.title{text-align: left;}
-article.dream > div > a >img{}
-article.dream > div > a > span{color: #000; border-bottom:1px solid #000;}
+article.dream > div > div.titleTxt{text-align: left;}
+article.dream > div > div.titleTxt > span{ text-align: left;}
 
 
 article.interstellar{}
@@ -115,15 +114,15 @@ article.subway > div.wrap{}
 /* 481px ~ 1480px */
 @media all and (min-width: 481px) and (max-width: 1480px) {
     article.secret > div.wrap{flex-direction: column;}
-    article.secret > div > div.title{text-align: center;}
+    article.secret > div > div.titleTxt{text-align: center;}
     article.dream > div.wrap{flex-direction: column;}
-    article.dream > div > div.title{text-align: center;}
+    article.dream > div > div.titleTxt{text-align: center;}
 
     article.work{height: 900px;}
     article.work > div{width: 100%; display: flex; flex-direction:column; align-items: center;text-align: center;}
-    article.work > div > div.title{position: relative; bottom: 0; text-align: center;}
-    article.work > div > div.title > a{display: block;margin:30px 0 15px;}
-    article.work > div > div.title > span{display: block;  text-align: center;}
+    article.work > div > div.titleTxt{position: relative; bottom: 0; text-align: center;}
+    article.work > div > div.titleTxt > a{display: block;margin:30px 0 15px;}
+    article.work > div > div.titleTxt > span{display: block;  text-align: center;}
     article > div > a{width: 80%; overflow: visible;}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
     article > div > a:hover > img{filter:blur(0px); transform: scale(1);}
@@ -143,15 +142,15 @@ article.subway > div.wrap{}
   
 
     article.secret > div.wrap{flex-direction: column;}
-    article.secret > div > div.title{text-align: center;}
+    article.secret > div > div.titleTxt{text-align: center;}
     article.dream > div.wrap{flex-direction: column;}
-    article.dream > div > div.title{text-align: center;}
+    article.dream > div > div.titleTxt{text-align: center;}
     
     article.work{height: 250px; margin-bottom: 50px;}
     article.work > div{ height: 100%; width: 100%; top: 0; display: flex; flex-direction:column; align-items: center;text-align: center; }
-    article.work > div > div.title{position: relative; text-align: center;}
-    article.work > div > div.title > a{display: block;margin:0 0 15px; font-size: 30px;}
-    article.work > div > div.title > span{display: block; font-size: 16px;  text-align: center;}
+    article.work > div > div.titleTxt{position: relative; text-align: center;}
+    article.work > div > div.titleTxt > a{display: block;margin:0 0 15px; font-size: 30px;}
+    article.work > div > div.titleTxt > span{display: block; font-size: 16px;  text-align: center;}
     article > div > a{width: 80%;}
     article > div > a > img{width: 100%; position: relative; transition: 800ms;}
 
