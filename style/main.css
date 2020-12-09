@@ -101,6 +101,7 @@ article.dream{}
 article.dream > div.wrap{flex-direction: row-reverse;}
 article.dream > div > div.titleTxt{text-align: left;}
 article.dream > div > div.titleTxt > span{ text-align: left;}
+article.dream > div > a > span{ text-align: center; border-bottom: 1px solid #454545; color: #454545;}
 
 
 article.interstellar{}
