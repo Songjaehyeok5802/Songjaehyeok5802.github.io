@@ -41,7 +41,7 @@ section > article > div > div > img:last-child{margin: 0;}
     section > article > div > img.subImg{width: 100%;}
     section > article > div > iframe{width: 100%;}
     section > article > div > div > img{width: 100%; margin-bottom: 100px;}
-    section > article > div > div > p.explain{font-size: 20px;width: 100%; line-height: 50px;}
+    section > article > div > div > p.explain{font-size: 18px;width: 100%; line-height: 50px;}
 }
 
 
