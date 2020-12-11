@@ -175,6 +175,7 @@ footer > a{color: #454545; text-decoration: none;font-family:'Noto Sans KR'; fon
 
     
     footer{margin: 150px auto 150px; width: 80%;}
+    footer > img{opacity: 0; display: none;}
     footer > a{font-size: 100px;font-weight: 300;}
 
 }
