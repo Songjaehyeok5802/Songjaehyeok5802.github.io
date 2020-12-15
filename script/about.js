@@ -10,6 +10,16 @@ new hoverEffect({
     displacementImage:"./img/profile_Img/effect.png"
 });
 
+const windowWidth = $( window ).width();
+    let IS_SmallWidth = (windowWidth < 500) ? true : false;
+    
+    
+if(IS_SmallWidth){
+    $("p.mainTxt > br").remove();
+    $("p.mainTxt > span > br").remove();
+}
+
+
 
 //three 
 /*

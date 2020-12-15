@@ -39,5 +39,5 @@ section > article > div > div.subImg > p{font-family: 'Noto Sans KR'; margin-lef
 
     section > article > div > div.subImg{width: 100%; flex-direction: column;  margin-bottom: 100px;}
     section > article > div > div.subImg > img{width: 100%; width: 100%;}
-    section > article > div > div.subImg > p{margin-left: 0; width: 100%;}
+    section > article > div > div.subImg > p{margin-left: 0; font-size: 18px;width: 100%; line-height: 50px;}
 }

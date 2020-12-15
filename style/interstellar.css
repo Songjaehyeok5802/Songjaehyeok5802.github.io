@@ -60,4 +60,5 @@ section > article > div > div.story3D > div.story_wrap > img{width: 100%; float:
      section > article > div > img.subImg{width: 100%;}
      section > article > div > div > img{width: 100%; margin-bottom: 100px;}
      section > article > div > div > p.explain{font-size: 18px;width: 100%; line-height: 50px;}
+     section > article > div > p.explain3D{font-size: 18px;width: 100%; line-height: 50px;}
  }

@@ -59,12 +59,12 @@ function bg_3D() {
     // sphere
     let angle = 5;
     // const geoSphere = new THREE.SphereGeometry( 1.5, angle, angle);
-    const geoSphere = new THREE.TorusKnotGeometry( 10, 1, 300, 9, 6, 14 );
-    const matColor = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
-    const colorMesh = new THREE.Mesh(geoSphere, matColor);
-    colorMesh.scale.set(0.1, 0.1, 0.1);
-    colorMesh.position.set(0, 0, 0);
-    scene.add(colorMesh);
+    const mainGeo = new THREE.TorusKnotGeometry( 10, 1, 300, 9, 6, 14 );
+    const mainMat = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
+    const mainMesh = new THREE.Mesh(mainGeo, mainMat);
+    mainMesh.scale.set(0.1, 0.1, 0.1);
+    mainMesh.position.set(0, 0, 0);
+    scene.add(mainMesh);
 
 
 
@@ -86,7 +86,7 @@ function bg_3D() {
         requestAnimationFrame(renderScene);
 
         
-        colorMesh.rotation.y += 0.004;
+        mainMesh.rotation.y += 0.004;
         
         // interMesh.rotation.y += 0.0035;
         // dreamMesh.rotation.y += 0.0035;
@@ -98,28 +98,6 @@ function bg_3D() {
     }   
 }
 
-
-
-// 배경 스크롤 블러처리
-function scrollOpacity(){
-    const bg = document.querySelector("#bg_3D"),
-          btnRight = document.querySelector("div.btnRight"),
-          btnLeft = document.querySelector("div.btnLeft");
-    const checkpoint = window.innerHeight;
-    window.addEventListener("scroll", () => {
-      const currentScroll = window.scrollY;
-    
-      if (currentScroll < checkpoint) {
-        bg.style.opacity = 1.3 - currentScroll / checkpoint;
-        btnRight.style.opacity = 1.3 - currentScroll / checkpoint;
-        btnLeft.style.opacity = 1.3 - currentScroll / checkpoint;
-      } else {
-        bg.style.opacity = 0.1;
-        btnRight.style.opacity = 0.1;
-        btnLeft.style.opacity = 0.1;
-      }
-    });
-}
 
 function objectBtn(){
   const IS_MOBILE = (ua.toLowerCase().match(/mobile/) !== null) ? true : false,
