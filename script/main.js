@@ -56,9 +56,6 @@ function bg_3D() {
     SpotlightFront.position.set(10, 0, 0);
 
 
-    // sphere
-    let angle = 5;
-    // const geoSphere = new THREE.SphereGeometry( 1.5, angle, angle);
     const mainGeo = new THREE.TorusKnotGeometry( 10, 1, 300, 9, 6, 14 );
     const mainMat = new THREE.MeshLambertMaterial({color : 0xedfaff, wireframe : false});
     const mainMesh = new THREE.Mesh(mainGeo, mainMat);
